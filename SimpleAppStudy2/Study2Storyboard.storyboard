@@ -47,7 +47,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Seg 로 present"/>
                                 <connections>
-                                    <segue destination="p7v-RG-FuT" kind="presentation" id="E5Z-Fg-j0W"/>
+                                    <segue destination="p7v-RG-FuT" kind="presentation" modalPresentationStyle="fullScreen" id="E5Z-Fg-j0W"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X9-Lm-ycI">
@@ -61,6 +61,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="title을 code로 push"/>
+                                <connections>
+                                    <action selector="codePushButton:" destination="5EZ-qb-Rvc" eventType="touchUpInside" id="Wmj-24-KqR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -106,12 +109,12 @@
             </objects>
             <point key="canvasLocation" x="831" y="-2"/>
         </scene>
-        <!--View Controller-->
+        <!--Segue Present View Controller-->
         <scene sceneID="zzK-DW-Y9u">
             <objects>
-                <viewController id="p7v-RG-FuT" sceneMemberID="viewController">
+                <viewController id="p7v-RG-FuT" customClass="SeguePresentViewController" customModule="SimpleAppStudy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jq3-O7-oXR">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="seg로 Present" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kA7-Ro-Xnj">
@@ -127,7 +130,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Back"/>
                                 <connections>
-                                    <action selector="tapBackButton:" destination="kcm-GI-EJG" eventType="touchUpInside" id="kfO-aW-Xzg"/>
+                                    <action selector="tabBackButton:" destination="p7v-RG-FuT" eventType="touchUpInside" id="PvI-Kw-tln"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,9 +140,38 @@
                     <navigationItem key="navigationItem" id="1To-iE-196"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylR-3o-dgv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="kcm-GI-EJG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="830" y="710"/>
+        </scene>
+        <!--Code Push View Controller-->
+        <scene sceneID="a8d-KR-ISL">
+            <objects>
+                <viewController storyboardIdentifier="CodePushViewController" id="8bf-Ze-UzP" customClass="CodePushViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DbS-YU-lRo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="code로 push" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjF-yv-H3B">
+                                <rect key="frame" x="149" y="241" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEh-PN-ESF">
+                                <rect key="frame" x="159" y="426" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CAW-Ca-wkZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fUm-3c-Try" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-686" y="769"/>
         </scene>
     </scenes>
     <resources>

@@ -14,8 +14,9 @@ class SeguePresentViewController: UIViewController {
         
     }
 
-    @IBAction func tapBackButton(_ sender: UIButton) {
+    @IBAction func tabBackButton(_ sender: UIButton) {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
+    
     
 }
