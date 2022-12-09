@@ -62,7 +62,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="title을 code로 push"/>
                                 <connections>
-                                    <action selector="codePushButton:" destination="5EZ-qb-Rvc" eventType="touchUpInside" id="Wmj-24-KqR"/>
+                                    <action selector="codePushButton:" destination="5EZ-qb-Rvc" eventType="touchUpInside" id="yxH-lK-kQj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -146,7 +146,7 @@
         <!--Code Push View Controller-->
         <scene sceneID="a8d-KR-ISL">
             <objects>
-                <viewController storyboardIdentifier="CodePushViewController" id="8bf-Ze-UzP" customClass="CodePushViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CodePushViewController" id="8bf-Ze-UzP" customClass="CodePushViewController" customModule="SimpleAppStudy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DbS-YU-lRo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUm-3c-Try" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-686" y="769"/>
+            <point key="canvasLocation" x="50" y="683"/>
         </scene>
     </scenes>
     <resources>
