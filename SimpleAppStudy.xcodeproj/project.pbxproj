@@ -23,6 +23,8 @@
 		D5BA40842930A29300B13383 /* SimpleAppStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA40832930A29300B13383 /* SimpleAppStudyTests.swift */; };
 		D5BA408E2930A29300B13383 /* SimpleAppStudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA408D2930A29300B13383 /* SimpleAppStudyUITests.swift */; };
 		D5BA40902930A29300B13383 /* SimpleAppStudyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA408F2930A29300B13383 /* SimpleAppStudyUITestsLaunchTests.swift */; };
+		D5F6680029463ABC00B407AA /* SampleStudyStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F667FF29463ABC00B407AA /* SampleStudyStoryboard.storyboard */; };
+		D5F6680229463AD000B407AA /* SampleStudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6680129463AD000B407AA /* SampleStudyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		D5BA40892930A29300B13383 /* SimpleAppStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleAppStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BA408D2930A29300B13383 /* SimpleAppStudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppStudyUITests.swift; sourceTree = "<group>"; };
 		D5BA408F2930A29300B13383 /* SimpleAppStudyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppStudyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D5F667FF29463ABC00B407AA /* SampleStudyStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SampleStudyStoryboard.storyboard; sourceTree = "<group>"; };
+		D5F6680129463AD000B407AA /* SampleStudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleStudyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		D5BA40602930A29200B13383 = {
 			isa = PBXGroup;
 			children = (
+				D5F667FE29463A9D00B407AA /* SampleStudy */,
 				D59892DF2930C14E004A5B33 /* SimpleAppStudy2 */,
 				D5BA406B2930A29200B13383 /* SimpleAppStudy */,
 				D5BA40822930A29300B13383 /* SimpleAppStudyTests */,
@@ -154,6 +159,15 @@
 				D5BA408F2930A29300B13383 /* SimpleAppStudyUITestsLaunchTests.swift */,
 			);
 			path = SimpleAppStudyUITests;
+			sourceTree = "<group>";
+		};
+		D5F667FE29463A9D00B407AA /* SampleStudy */ = {
+			isa = PBXGroup;
+			children = (
+				D5F667FF29463ABC00B407AA /* SampleStudyStoryboard.storyboard */,
+				D5F6680129463AD000B407AA /* SampleStudyViewController.swift */,
+			);
+			path = SampleStudy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +277,7 @@
 				D5BA40792930A29200B13383 /* LaunchScreen.storyboard in Resources */,
 				D5BA40762930A29200B13383 /* Assets.xcassets in Resources */,
 				D59892E32930C30F004A5B33 /* Study2Storyboard.storyboard in Resources */,
+				D5F6680029463ABC00B407AA /* SampleStudyStoryboard.storyboard in Resources */,
 				D5BA40742930A29200B13383 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5F6680229463AD000B407AA /* SampleStudyViewController.swift in Sources */,
 				D5BA40712930A29200B13383 /* ViewController.swift in Sources */,
 				D5856B262946318F00F7A0FB /* CodePushViewController.swift in Sources */,
 				D5BA406D2930A29200B13383 /* AppDelegate.swift in Sources */,
