@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D5566BD7294982EE00E96730 /* SeguePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5566BD6294982EE00E96730 /* SeguePushViewController.swift */; };
 		D581E0CF29375F18006F422F /* SuguePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581E0CE29375F18006F422F /* SuguePushViewController.swift */; };
 		D5856B262946318F00F7A0FB /* CodePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5856B252946318F00F7A0FB /* CodePushViewController.swift */; };
 		D5856B28294633F200F7A0FB /* CodePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5856B27294633F200F7A0FB /* CodePresentViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D5566BD6294982EE00E96730 /* SeguePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePushViewController.swift; sourceTree = "<group>"; };
 		D581E0CE29375F18006F422F /* SuguePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuguePushViewController.swift; sourceTree = "<group>"; };
 		D5856B252946318F00F7A0FB /* CodePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePushViewController.swift; sourceTree = "<group>"; };
 		D5856B27294633F200F7A0FB /* CodePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePresentViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				D5F667FF29463ABC00B407AA /* SampleStudyStoryboard.storyboard */,
 				D5F6680129463AD000B407AA /* SampleStudyViewController.swift */,
+				D5566BD6294982EE00E96730 /* SeguePushViewController.swift */,
 			);
 			path = SampleStudy;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5F6680229463AD000B407AA /* SampleStudyViewController.swift in Sources */,
+				D5566BD7294982EE00E96730 /* SeguePushViewController.swift in Sources */,
 				D5BA40712930A29200B13383 /* ViewController.swift in Sources */,
 				D5856B262946318F00F7A0FB /* CodePushViewController.swift in Sources */,
 				D5BA406D2930A29200B13383 /* AppDelegate.swift in Sources */,
