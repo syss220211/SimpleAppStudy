@@ -11,7 +11,6 @@ class SampleStudyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
-
 }

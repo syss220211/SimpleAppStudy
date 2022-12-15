@@ -12,5 +12,10 @@ class presentSegueViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    @IBAction func presentBackButton(_ sender: UIButton) {
+        
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
 }
