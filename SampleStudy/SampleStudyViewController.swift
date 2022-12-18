@@ -13,13 +13,6 @@ class SampleStudyViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    
-    @IBAction func CodeButton(_ sender: UIButton) {
-        guard let codeButton = self.storyboard?.instantiateViewController(withIdentifier: "CodePushViewController") else { return }
-        
-        self.navigationController?.pushViewController(codeButton, animated: true)
-    }
-    
-    
+    // code push
     
 }
