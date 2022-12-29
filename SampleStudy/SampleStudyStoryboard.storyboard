@@ -38,14 +38,13 @@
                                     <segue destination="c83-u7-XxA" kind="show" id="DgA-ka-ube"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBJ-gO-H9G">
-                                <rect key="frame" x="138" y="370" width="119" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlP-c8-8iT">
+                                <rect key="frame" x="132" y="389" width="119" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="code로 push"/>
                                 <connections>
-                                    <action selector="CodeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eai-a3-PhV"/>
-                                    <action selector="codePushButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MO0-P7-rPv"/>
+                                    <action selector="pushButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="m4X-qW-CCW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="1063.3587786259541" y="-67.605633802816911"/>
         </scene>
-        <!--Code Push View Controller-->
+        <!--Code Push Test View Controller-->
         <scene sceneID="g1C-PK-nhj">
             <objects>
-                <viewController storyboardIdentifier="CodePushViewController" id="F8a-WG-jrn" customClass="CodePushViewController" customModule="SimpleAppStudy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CodePushTestViewController" id="F8a-WG-jrn" customClass="CodePushTestViewController" customModule="SimpleAppStudy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="do8-zx-bhb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
