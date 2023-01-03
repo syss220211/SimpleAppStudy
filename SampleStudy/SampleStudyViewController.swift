@@ -27,7 +27,7 @@ class SampleStudyViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("viewDidDisappear, ViewController 뷰가 나타날 것이다.")
+        print("viewDidDisappear, ViewController 뷰가 나타났다.")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
