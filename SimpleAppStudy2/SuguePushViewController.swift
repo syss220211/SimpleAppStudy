@@ -9,8 +9,17 @@ import UIKit
 
 class SuguePushViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    var name: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 전달받은 데이터 namelabel에 표시하기
+        if let name = name {
+            self.nameLabel.text = name
+            self.nameLabel.sizeToFit()
+        }
     }
     
     // 이전 화면으로 돌아가는 button 
