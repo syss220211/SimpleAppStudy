@@ -9,7 +9,7 @@ import UIKit
 
 // 데이터 전달을 위한 프로토콜 정의
 protocol LEDBoardSettingDelegate: AnyObject {
-    func changedSetting(Text: String?, textColor: UIColor, backgroundColor: UIColor)
+    func changedSetting(text: String?, textColor: UIColor, backgroundColor: UIColor)
 }
 
 class SettingViewController: UIViewController {
@@ -27,14 +27,26 @@ class SettingViewController: UIViewController {
     // delegate 정의
     weak var delegate: LEDBoardSettingDelegate?
     
+    // 다시 설정화면으로 되돌아 왔을때 데이터를 보여주기 위해 delegate 추가
+    var ledText: String?
+    
     // 맨처음 표시되는 색상으로 초기화
     var textColor: UIColor = .yellow
     var backgroundColor: UIColor = .black
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureView()
     }
     
+    // 설정화면으로 되돌아 갈때 전달할 데이터 정의
+    private func configureView() {
+        if let ledText = self.ledText {
+            self.textField.text = ledText
+        }
+        self.changeTextColor(color: self.textColor)
+        self.changeBackgroundColorButton(color: self.backgroundColor)
+    }
 
     @IBAction func tapTextColorButton(_ sender: UIButton) {
         if sender == self.yellowButton {
@@ -64,7 +76,10 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func tapSaveButton(_ sender: UIButton) {
-        
+        // 설정한 값들 넘기기
+        self.delegate?.changedSetting(text: self.textField.text, textColor: self.textColor, backgroundColor: self.backgroundColor)
+        // 이전 화면으로 이동
+        self.navigationController?.popViewController(animated: true)
     }
     
     private func changeTextColor(color: UIColor) {
