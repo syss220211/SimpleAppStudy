@@ -12,6 +12,9 @@
 		D581E0CF29375F18006F422F /* SuguePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581E0CE29375F18006F422F /* SuguePushViewController.swift */; };
 		D5856B262946318F00F7A0FB /* CodePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5856B252946318F00F7A0FB /* CodePushViewController.swift */; };
 		D5856B28294633F200F7A0FB /* CodePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5856B27294633F200F7A0FB /* CodePresentViewController.swift */; };
+		D5880CF02966A9CC0043668A /* SimpleAppStudyLedStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5880CEF2966A9CC0043668A /* SimpleAppStudyLedStoryboard.storyboard */; };
+		D5880CF22966A9DB0043668A /* SimpleAppStudyLedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5880CF12966A9DB0043668A /* SimpleAppStudyLedViewController.swift */; };
+		D5880CF42966B84C0043668A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5880CF32966B84C0043668A /* SettingViewController.swift */; };
 		D59892DD2930AECF004A5B33 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59892DC2930AECF004A5B33 /* Content.swift */; };
 		D59892E12930C22B004A5B33 /* Study2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59892E02930C22B004A5B33 /* Study2ViewController.swift */; };
 		D59892E32930C30F004A5B33 /* Study2Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D59892E22930C30F004A5B33 /* Study2Storyboard.storyboard */; };
@@ -53,6 +56,9 @@
 		D581E0CE29375F18006F422F /* SuguePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuguePushViewController.swift; sourceTree = "<group>"; };
 		D5856B252946318F00F7A0FB /* CodePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePushViewController.swift; sourceTree = "<group>"; };
 		D5856B27294633F200F7A0FB /* CodePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePresentViewController.swift; sourceTree = "<group>"; };
+		D5880CEF2966A9CC0043668A /* SimpleAppStudyLedStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleAppStudyLedStoryboard.storyboard; sourceTree = "<group>"; };
+		D5880CF12966A9DB0043668A /* SimpleAppStudyLedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppStudyLedViewController.swift; sourceTree = "<group>"; };
+		D5880CF32966B84C0043668A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		D59892DC2930AECF004A5B33 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		D59892E02930C22B004A5B33 /* Study2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study2ViewController.swift; sourceTree = "<group>"; };
 		D59892E22930C30F004A5B33 /* Study2Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Study2Storyboard.storyboard; sourceTree = "<group>"; };
@@ -100,6 +106,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D5880CEC2966A97E0043668A /* SimpleAppStudyLed */ = {
+			isa = PBXGroup;
+			children = (
+				D5880CEF2966A9CC0043668A /* SimpleAppStudyLedStoryboard.storyboard */,
+				D5880CF12966A9DB0043668A /* SimpleAppStudyLedViewController.swift */,
+				D5880CF32966B84C0043668A /* SettingViewController.swift */,
+			);
+			path = SimpleAppStudyLed;
+			sourceTree = "<group>";
+		};
 		D59892DF2930C14E004A5B33 /* SimpleAppStudy2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +132,7 @@
 		D5BA40602930A29200B13383 = {
 			isa = PBXGroup;
 			children = (
+				D5880CEC2966A97E0043668A /* SimpleAppStudyLed */,
 				D5F667FE29463A9D00B407AA /* SampleStudy */,
 				D59892DF2930C14E004A5B33 /* SimpleAppStudy2 */,
 				D5BA406B2930A29200B13383 /* SimpleAppStudy */,
@@ -284,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5BA40792930A29200B13383 /* LaunchScreen.storyboard in Resources */,
+				D5880CF02966A9CC0043668A /* SimpleAppStudyLedStoryboard.storyboard in Resources */,
 				D5BA40762930A29200B13383 /* Assets.xcassets in Resources */,
 				D59892E32930C30F004A5B33 /* Study2Storyboard.storyboard in Resources */,
 				D5F6680029463ABC00B407AA /* SampleStudyStoryboard.storyboard in Resources */,
@@ -317,7 +335,9 @@
 				D5F6680229463AD000B407AA /* SampleStudyViewController.swift in Sources */,
 				D5566BD7294982EE00E96730 /* SeguePushViewController.swift in Sources */,
 				D5BA40712930A29200B13383 /* ViewController.swift in Sources */,
+				D5880CF42966B84C0043668A /* SettingViewController.swift in Sources */,
 				D5856B262946318F00F7A0FB /* CodePushViewController.swift in Sources */,
+				D5880CF22966A9DB0043668A /* SimpleAppStudyLedViewController.swift in Sources */,
 				D5BA406D2930A29200B13383 /* AppDelegate.swift in Sources */,
 				D59892E12930C22B004A5B33 /* Study2ViewController.swift in Sources */,
 				D5BA406F2930A29200B13383 /* SceneDelegate.swift in Sources */,
