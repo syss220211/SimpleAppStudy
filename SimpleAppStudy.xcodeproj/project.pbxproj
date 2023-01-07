@@ -29,6 +29,8 @@
 		D5BA40842930A29300B13383 /* SimpleAppStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA40832930A29300B13383 /* SimpleAppStudyTests.swift */; };
 		D5BA408E2930A29300B13383 /* SimpleAppStudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA408D2930A29300B13383 /* SimpleAppStudyUITests.swift */; };
 		D5BA40902930A29300B13383 /* SimpleAppStudyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA408F2930A29300B13383 /* SimpleAppStudyUITestsLaunchTests.swift */; };
+		D5C7B8F02969BDD700FFC994 /* SimpleAppCalculatorStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7B8EF2969BDD700FFC994 /* SimpleAppCalculatorStoryboard.storyboard */; };
+		D5C7B8F22969BDEC00FFC994 /* SimpleAppCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C7B8F12969BDEC00FFC994 /* SimpleAppCalculatorViewController.swift */; };
 		D5F6680029463ABC00B407AA /* SampleStudyStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F667FF29463ABC00B407AA /* SampleStudyStoryboard.storyboard */; };
 		D5F6680229463AD000B407AA /* SampleStudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6680129463AD000B407AA /* SampleStudyViewController.swift */; };
 /* End PBXBuildFile section */
@@ -77,6 +79,8 @@
 		D5BA40892930A29300B13383 /* SimpleAppStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleAppStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BA408D2930A29300B13383 /* SimpleAppStudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppStudyUITests.swift; sourceTree = "<group>"; };
 		D5BA408F2930A29300B13383 /* SimpleAppStudyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppStudyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D5C7B8EF2969BDD700FFC994 /* SimpleAppCalculatorStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleAppCalculatorStoryboard.storyboard; sourceTree = "<group>"; };
+		D5C7B8F12969BDEC00FFC994 /* SimpleAppCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppCalculatorViewController.swift; sourceTree = "<group>"; };
 		D5F667FF29463ABC00B407AA /* SampleStudyStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SampleStudyStoryboard.storyboard; sourceTree = "<group>"; };
 		D5F6680129463AD000B407AA /* SampleStudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleStudyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +136,7 @@
 		D5BA40602930A29200B13383 = {
 			isa = PBXGroup;
 			children = (
+				D5C7B8EE2969BD9C00FFC994 /* SimpleAppCalculator */,
 				D5880CEC2966A97E0043668A /* SimpleAppStudyLed */,
 				D5F667FE29463A9D00B407AA /* SampleStudy */,
 				D59892DF2930C14E004A5B33 /* SimpleAppStudy2 */,
@@ -182,6 +187,15 @@
 				D5BA408F2930A29300B13383 /* SimpleAppStudyUITestsLaunchTests.swift */,
 			);
 			path = SimpleAppStudyUITests;
+			sourceTree = "<group>";
+		};
+		D5C7B8EE2969BD9C00FFC994 /* SimpleAppCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				D5C7B8EF2969BDD700FFC994 /* SimpleAppCalculatorStoryboard.storyboard */,
+				D5C7B8F12969BDEC00FFC994 /* SimpleAppCalculatorViewController.swift */,
+			);
+			path = SimpleAppCalculator;
 			sourceTree = "<group>";
 		};
 		D5F667FE29463A9D00B407AA /* SampleStudy */ = {
@@ -301,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5BA40792930A29200B13383 /* LaunchScreen.storyboard in Resources */,
+				D5C7B8F02969BDD700FFC994 /* SimpleAppCalculatorStoryboard.storyboard in Resources */,
 				D5880CF02966A9CC0043668A /* SimpleAppStudyLedStoryboard.storyboard in Resources */,
 				D5BA40762930A29200B13383 /* Assets.xcassets in Resources */,
 				D59892E32930C30F004A5B33 /* Study2Storyboard.storyboard in Resources */,
@@ -336,6 +351,7 @@
 				D5566BD7294982EE00E96730 /* SeguePushViewController.swift in Sources */,
 				D5BA40712930A29200B13383 /* ViewController.swift in Sources */,
 				D5880CF42966B84C0043668A /* SettingViewController.swift in Sources */,
+				D5C7B8F22969BDEC00FFC994 /* SimpleAppCalculatorViewController.swift in Sources */,
 				D5856B262946318F00F7A0FB /* CodePushViewController.swift in Sources */,
 				D5880CF22966A9DB0043668A /* SimpleAppStudyLedViewController.swift in Sources */,
 				D5BA406D2930A29200B13383 /* AppDelegate.swift in Sources */,
