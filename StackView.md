@@ -1,4 +1,4 @@
----StackView---  
+#StackView  
   
 stackview 구성 : Axis, Alignment, Distribution, Spacing  
   
@@ -11,3 +11,15 @@ stackview 구성 : Axis, Alignment, Distribution, Spacing
 -> Fill Proportionally : 방향에 따라 비율을 맞춰 스택뷰를 채움  
 -> Equal Spacing : 서브뷰 사이 공간을 균등하게 배치  
 -> Equal Centering : 각 서브뷰의 센터와 센터간의 길이를 동일하게 맞춤  
+
+3. Alignment : 스택뷰의 서브뷰들을 어떤식으로 정렬할지 결정하는 속성
+-> Fill  
+-> Leading  
+-> Top  
+-> First Baselinge  
+-> Center  
+-> Tailing  
+-> Bottom  
+-> Last Baseline  
+
+4. Spacing : 스택뷰 안에 들어가는 뷰들의 간격을 조정하는 속성
