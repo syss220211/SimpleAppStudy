@@ -37,7 +37,7 @@ class Study2ViewController: UIViewController, SendDataDelgate {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("viewDidsappear 호출")
+        print("viewDidDisappear 호출")
     }
     
     
