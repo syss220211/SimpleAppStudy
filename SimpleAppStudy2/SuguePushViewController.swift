@@ -18,7 +18,8 @@ class SuguePushViewController: UIViewController {
         // 전달받은 데이터 namelabel에 표시하기
         if let name = name {
             self.nameLabel.text = name
-            self.nameLabel.sizeToFit()
+            self.nameLabel.adjustsFontSizeToFitWidth = true
+//            self.nameLabel.sizeToFit()
         }
     }
     

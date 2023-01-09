@@ -19,7 +19,8 @@ class CodePushViewController: UIViewController {
         // 전달 받은 name 프로퍼티 name label에 표시하기
         if let name = name {
             self.nameLabel.text = name
-            self.nameLabel.sizeToFit()
+            self.nameLabel.adjustsFontSizeToFitWidth = true
+//            self.nameLabel.sizeToFit()
         }
     }
 

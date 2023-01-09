@@ -15,8 +15,34 @@ class Study2ViewController: UIViewController, SendDataDelgate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("viewDidLoad 호출")
 
     }
+    
+    // Life Cycle 확인
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear 호출")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("ViewDidAppear 호출")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("viewWillDisppear 호출")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("viewDidsappear 호출")
+    }
+    
+    
+    
+    //----------------------------------------------------------------------------------------------------
     
     // 데이터 전달
     // -> 전환되는 화면의 뷰컨의 클래스 타입으로 다운 캐스팅 진행
@@ -54,7 +80,8 @@ class Study2ViewController: UIViewController, SendDataDelgate {
     // 전환되는 화면에서 이전화면으로의 데이터 전달
     func sendData(name: String) {
         self.naemLabel.text = name
-        self.naemLabel.sizeToFit()
+//        self.naemLabel.sizeToFit()
+        self.naemLabel.adjustsFontSizeToFitWidth = true
     }
     
 }
