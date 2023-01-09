@@ -11,7 +11,7 @@ class SimpleAppCalculatorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("test")
     }
     
 
