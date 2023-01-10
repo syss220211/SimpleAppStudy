@@ -115,7 +115,7 @@ class SimpleAppCalculatorViewController: UIViewController {
                     break
                 }
                 
-                // Double 로 하되 1로 나누었을 때 0이라면 Int로 만들어주기
+                // 결과값을 나누었을 때 나머지가 0이라면 Int로 만들어주기
                 if let result = Double(self.result), result.truncatingRemainder(dividingBy: 1) == 0 {
                     self.result = "\(Int(result))"
                 }
