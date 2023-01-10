@@ -17,7 +17,6 @@ enum Operation {
 
 
 class SimpleAppCalculatorViewController: UIViewController {
-
     
     @IBOutlet weak var numberOutputLabel: UILabel!
     
@@ -70,22 +69,66 @@ class SimpleAppCalculatorViewController: UIViewController {
     }
     
     @IBAction func tapDivideButton(_ sender: UIButton) {
-        
+        self.operation(.Divide)
     }
     
     @IBAction func tapMultiplyButton(_ sender: UIButton) {
-        
+        self.operation(.Multiply)
     }
     
     @IBAction func tapSubtractButton(_ sender: UIButton) {
-        
+        self.operation(.Subtract)
     }
     
     @IBAction func tapAddButton(_ sender: UIButton) {
-        
+        self.operation(.Add)
     }
     
     @IBAction func tapEqualButton(_ sender: UIButton) {
-        
+        self.operation(self.currentOperation)
+    }
+    
+    // 계산 담당 함수 정의
+    func operation(_ opeartion: Operation) {
+        if self.currentOperation != .unknown {
+            if !self.displayNumber.isEmpty {
+                self.secondOperand = self.displayNumber
+                self.displayNumber = ""
+                
+                guard let firstOperand = Double(self.firstOperand) else { return }
+                guard let secondOperand = Double(self.secondOperand) else { return }
+                
+                switch self.currentOperation {
+                case .Add:
+                    self.result = "\(firstOperand + secondOperand)"
+                    
+                case .Subtract:
+                    self.result = "\(firstOperand - secondOperand)"
+                
+                case .Multiply:
+                    self.result = "\(firstOperand * secondOperand)"
+                
+                case .Divide:
+                    self.result = "\(firstOperand / secondOperand)"
+                
+                default:
+                    break
+                }
+                
+                // Double 로 하되 1로 나누었을 때 0이라면 Int로 만들어주기
+                if let result = Double(self.result), result.truncatingRemainder(dividingBy: 1) == 0 {
+                    self.result = "\(Int(result))"
+                }
+                
+                self.firstOperand = self.result
+                self.numberOutputLabel.text = self.result
+            }
+            
+            self.currentOperation = opeartion
+        } else {
+            self.firstOperand = self.displayNumber
+            self.currentOperation = opeartion
+            self.displayNumber = ""
+        }
     }
 }
