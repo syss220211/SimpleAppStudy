@@ -19,6 +19,7 @@
 		D5880CF42966B84C0043668A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5880CF32966B84C0043668A /* SettingViewController.swift */; };
 		D59417D7296E8C5400654643 /* SimpleAppTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59417D6296E8C5400654643 /* SimpleAppTodoViewController.swift */; };
 		D59417D9296E8D4500654643 /* SimpleAppTodoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D59417D8296E8D4500654643 /* SimpleAppTodoStoryboard.storyboard */; };
+		D59417DB297056B600654643 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59417DA297056B600654643 /* Task.swift */; };
 		D59892DD2930AECF004A5B33 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59892DC2930AECF004A5B33 /* Content.swift */; };
 		D59892E12930C22B004A5B33 /* Study2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59892E02930C22B004A5B33 /* Study2ViewController.swift */; };
 		D59892E32930C30F004A5B33 /* Study2Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D59892E22930C30F004A5B33 /* Study2Storyboard.storyboard */; };
@@ -69,6 +70,7 @@
 		D5880CF32966B84C0043668A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		D59417D6296E8C5400654643 /* SimpleAppTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppTodoViewController.swift; sourceTree = "<group>"; };
 		D59417D8296E8D4500654643 /* SimpleAppTodoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleAppTodoStoryboard.storyboard; sourceTree = "<group>"; };
+		D59417DA297056B600654643 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		D59892DC2930AECF004A5B33 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		D59892E02930C22B004A5B33 /* Study2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study2ViewController.swift; sourceTree = "<group>"; };
 		D59892E22930C30F004A5B33 /* Study2Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Study2Storyboard.storyboard; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				D59417D6296E8C5400654643 /* SimpleAppTodoViewController.swift */,
 				D59417D8296E8D4500654643 /* SimpleAppTodoStoryboard.storyboard */,
+				D59417DA297056B600654643 /* Task.swift */,
 			);
 			path = SimpleAppTodo;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				D5C7B8F22969BDEC00FFC994 /* SimpleAppCalculatorViewController.swift in Sources */,
 				D5856B262946318F00F7A0FB /* CodePushViewController.swift in Sources */,
 				D5880CF22966A9DB0043668A /* SimpleAppStudyLedViewController.swift in Sources */,
+				D59417DB297056B600654643 /* Task.swift in Sources */,
 				D5BA406D2930A29200B13383 /* AppDelegate.swift in Sources */,
 				D59892E12930C22B004A5B33 /* Study2ViewController.swift in Sources */,
 				D5BA406F2930A29200B13383 /* SceneDelegate.swift in Sources */,
