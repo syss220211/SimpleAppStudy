@@ -10,13 +10,18 @@ import UIKit
 class SimpleAppTodoViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     // 할일들을 저장하는 배열
-    var tasks = [Task]()
+    var tasks = [Task]() {
+        // 프로퍼티 옵져버 설정 -> tasks 배열에 할일이 추가될때마다 userdefaults 에 할일이 저장됨
+        didSet {
+            self.saveTasks()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.dataSource = self
-
+        self.loadTasks() // 저장된 할 일 불러오기 
     }
     
     @IBAction func tapEditButton(_ sender: UIBarButtonItem) {
@@ -51,6 +56,32 @@ class SimpleAppTodoViewController: UIViewController {
         
         // add 버튼 눌렀을 때 alert 표시
         self.present(alert, animated: true, completion: nil)
+    }
+    // 앱을 껐다 켜도 todo list를 유지하도록 만들기 = UserDefaults에 할 일을 저장하도록 만들기
+    func saveTasks() {
+        let data = self.tasks.map {
+            // to do list data 딕셔너리로 묶기
+            [
+                "title" : $0.title,
+                "done" : $0.done
+            ]
+        }
+        let userEdfaults = UserDefaults.standard
+        UserDefaults.setValue(data, forKey: "tasks")
+        // UserDefaults : key, value 쌍으로 저장
+    }
+    
+    // 저장된 할일들을 로드하는 함수
+    func loadTasks() {
+        let userDefaults = UserDefaults.standard
+        // 저장된 할일들 불러오기
+        // object type = any -> type casting, opitonal을 대비하여 guard문
+        guard let data = userDefaults.object(forKey: "tasks") as? [[String : Any]] else { return }
+        self.tasks = data.compactMap { //tasks 배열에 저장하기
+            guard let title = $0["title"] as? String else { return nil }
+            guard let done = $0["done"] as? Bool else { return nil }
+            return Task(title: title, done: done)
+        }
     }
 }
 
