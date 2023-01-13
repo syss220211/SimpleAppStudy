@@ -66,8 +66,8 @@ class SimpleAppTodoViewController: UIViewController {
                 "done" : $0.done
             ]
         }
-        let userEdfaults = UserDefaults.standard
-        UserDefaults.setValue(data, forKey: "tasks")
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(data, forKey: "tasks")
         // UserDefaults : key, value 쌍으로 저장
     }
     
