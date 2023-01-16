@@ -21,7 +21,8 @@ class SimpleAppTodoViewController: UIViewController {
         super.viewDidLoad()
         
         self.tableView.dataSource = self
-        self.loadTasks() // 저장된 할 일 불러오기 
+        self.tableView.delegate = self // 체크박스 만들기
+        self.loadTasks() // 저장된 할 일 불러오기
     }
     
     @IBAction func tapEditButton(_ sender: UIBarButtonItem) {
@@ -103,5 +104,14 @@ extension SimpleAppTodoViewController: UITableViewDataSource {
         cell.textLabel?.text = task.title
         return cell
     }
-    
+}
+
+extension SimpleAppTodoViewController: UITableViewDelegate {
+    // cell을 선택하였을 때 어떤 cell이 선택 되었는지 알려주는 method
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var task = self.tasks[indexPath.row] // 배열 요소 접근
+        task.done = !task.done // 저장되어 있는 값의 반대 값을 저장하도록 만들기
+        self.tasks[indexPath.row] = task // 변경된 task 값을 원래 배열 요소에 덮어 씌우기
+        self.tableView.reloadRows(at: [indexPath], with: .automatic)// 선택된 셀만 reload 되도록 만들기
+    }
 }
