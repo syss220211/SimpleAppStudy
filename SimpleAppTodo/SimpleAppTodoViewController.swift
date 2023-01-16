@@ -102,6 +102,12 @@ extension SimpleAppTodoViewController: UITableViewDataSource {
         // indexPath = tableview에서 cell 위치를 나타내는 index.
         let task = self.tasks[indexPath.row]
         cell.textLabel?.text = task.title
+        
+        if task.done { // task.done == true
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
         return cell
     }
 }
