@@ -8,7 +8,13 @@
 import UIKit
 
 class SimpleAppTodoViewController: UIViewController {
+    // Edit 버튼으로 할일 수정하도록 만들기
+    @IBOutlet var editButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
+    
+    // var button 만들기
+    var doneButton: UIBarButtonItem?
+    
     // 할일들을 저장하는 배열
     var tasks = [Task]() {
         // 프로퍼티 옵져버 설정 -> tasks 배열에 할일이 추가될때마다 userdefaults 에 할일이 저장됨
@@ -19,14 +25,22 @@ class SimpleAppTodoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTap))
         self.tableView.dataSource = self
         self.tableView.delegate = self // 체크박스 만들기
         self.loadTasks() // 저장된 할 일 불러오기
     }
     
+    // #selector 를 위해서 앞에 @ 붙이기
+    @objc func doneButtonTap() { // 수정 끝내고 돌아가는 button
+        self.navigationItem.leftBarButtonItem = self.editButton
+        self.tableView.setEditing(false, animated: true)
+    }
+    
     @IBAction func tapEditButton(_ sender: UIBarButtonItem) {
-        
+        guard !self.tasks.isEmpty else { return } // empty가 아닐때만 실행
+        self.navigationItem.leftBarButtonItem = self.doneButton // 네비의 왼쪽 버튼이 doneButton이 되도록 설정
+        self.tableView.setEditing(true, animated: true)  // tableview가 편집모드로 전환되도록 설정 -> setediting, instance method
     }
     
     // add button -> 할일을 등록할 수 있도록 alert present
@@ -110,6 +124,21 @@ extension SimpleAppTodoViewController: UITableViewDataSource {
         }
         return cell
     }
+    // 편집모드에서 삭제버튼을 눌렀을 때 삭제 버튼이 눌려진 cell을 알려주는 method
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        self.tasks.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        
+        if self.tasks.isEmpty {
+            self.doneButtonTap()
+        }
+    }
+    
+    // 할일 순서 변경하기
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+    }
+    
 }
 
 extension SimpleAppTodoViewController: UITableViewDelegate {
