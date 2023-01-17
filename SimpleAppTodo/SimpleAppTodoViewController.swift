@@ -136,7 +136,13 @@ extension SimpleAppTodoViewController: UITableViewDataSource {
     
     // 할일 순서 변경하기
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        
+        // sourceIndexPath = 원래 있던 위치
+        // destinationIndex = 이동한 위치
+        var tasks = self.tasks
+        let task = tasks[sourceIndexPath.row]
+        tasks.remove(at: sourceIndexPath.row)
+        tasks.insert(task, at: destinationIndexPath.row)
+        self.tasks = tasks
     }
     
 }
