@@ -17,6 +17,8 @@
 		D5880CF02966A9CC0043668A /* SimpleAppStudyLedStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5880CEF2966A9CC0043668A /* SimpleAppStudyLedStoryboard.storyboard */; };
 		D5880CF22966A9DB0043668A /* SimpleAppStudyLedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5880CF12966A9DB0043668A /* SimpleAppStudyLedViewController.swift */; };
 		D5880CF42966B84C0043668A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5880CF32966B84C0043668A /* SettingViewController.swift */; };
+		D58E043C29783DA900AB28CC /* DiaryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D58E043B29783DA900AB28CC /* DiaryStoryboard.storyboard */; };
+		D58E043E29783DB400AB28CC /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58E043D29783DB400AB28CC /* DiaryViewController.swift */; };
 		D59417D7296E8C5400654643 /* SimpleAppTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59417D6296E8C5400654643 /* SimpleAppTodoViewController.swift */; };
 		D59417D9296E8D4500654643 /* SimpleAppTodoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D59417D8296E8D4500654643 /* SimpleAppTodoStoryboard.storyboard */; };
 		D59417DB297056B600654643 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59417DA297056B600654643 /* Task.swift */; };
@@ -68,6 +70,8 @@
 		D5880CEF2966A9CC0043668A /* SimpleAppStudyLedStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleAppStudyLedStoryboard.storyboard; sourceTree = "<group>"; };
 		D5880CF12966A9DB0043668A /* SimpleAppStudyLedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppStudyLedViewController.swift; sourceTree = "<group>"; };
 		D5880CF32966B84C0043668A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		D58E043B29783DA900AB28CC /* DiaryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryStoryboard.storyboard; sourceTree = "<group>"; };
+		D58E043D29783DB400AB28CC /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		D59417D6296E8C5400654643 /* SimpleAppTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppTodoViewController.swift; sourceTree = "<group>"; };
 		D59417D8296E8D4500654643 /* SimpleAppTodoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleAppTodoStoryboard.storyboard; sourceTree = "<group>"; };
 		D59417DA297056B600654643 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -130,6 +134,15 @@
 			path = SimpleAppStudyLed;
 			sourceTree = "<group>";
 		};
+		D58E043A29783D7E00AB28CC /* SimpleAppDiary */ = {
+			isa = PBXGroup;
+			children = (
+				D58E043B29783DA900AB28CC /* DiaryStoryboard.storyboard */,
+				D58E043D29783DB400AB28CC /* DiaryViewController.swift */,
+			);
+			path = SimpleAppDiary;
+			sourceTree = "<group>";
+		};
 		D59417D5296E8C2D00654643 /* SimpleAppTodo */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +169,7 @@
 		D5BA40602930A29200B13383 = {
 			isa = PBXGroup;
 			children = (
+				D58E043A29783D7E00AB28CC /* SimpleAppDiary */,
 				D59417D5296E8C2D00654643 /* SimpleAppTodo */,
 				D5C7B8EE2969BD9C00FFC994 /* SimpleAppCalculator */,
 				D5880CEC2966A97E0043668A /* SimpleAppStudyLed */,
@@ -345,6 +359,7 @@
 				D5F6680029463ABC00B407AA /* SampleStudyStoryboard.storyboard in Resources */,
 				D5BA40742930A29200B13383 /* Main.storyboard in Resources */,
 				D59417D9296E8D4500654643 /* SimpleAppTodoStoryboard.storyboard in Resources */,
+				D58E043C29783DA900AB28CC /* DiaryStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +394,7 @@
 				D5BA40712930A29200B13383 /* ViewController.swift in Sources */,
 				D5880CF42966B84C0043668A /* SettingViewController.swift in Sources */,
 				D5C7B8F22969BDEC00FFC994 /* SimpleAppCalculatorViewController.swift in Sources */,
+				D58E043E29783DB400AB28CC /* DiaryViewController.swift in Sources */,
 				D5856B262946318F00F7A0FB /* CodePushViewController.swift in Sources */,
 				D5880CF22966A9DB0043668A /* SimpleAppStudyLedViewController.swift in Sources */,
 				D59417DB297056B600654643 /* Task.swift in Sources */,
