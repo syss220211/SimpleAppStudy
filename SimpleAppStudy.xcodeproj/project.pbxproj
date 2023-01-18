@@ -19,6 +19,9 @@
 		D5880CF42966B84C0043668A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5880CF32966B84C0043668A /* SettingViewController.swift */; };
 		D58E043C29783DA900AB28CC /* DiaryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D58E043B29783DA900AB28CC /* DiaryStoryboard.storyboard */; };
 		D58E043E29783DB400AB28CC /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58E043D29783DB400AB28CC /* DiaryViewController.swift */; };
+		D58E044229784C1100AB28CC /* DiaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58E044129784C1100AB28CC /* DiaryCell.swift */; };
+		D58E044429784CA100AB28CC /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58E044329784CA100AB28CC /* StarViewController.swift */; };
+		D58E044629784DC300AB28CC /* StarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58E044529784DC300AB28CC /* StarCell.swift */; };
 		D59417D7296E8C5400654643 /* SimpleAppTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59417D6296E8C5400654643 /* SimpleAppTodoViewController.swift */; };
 		D59417D9296E8D4500654643 /* SimpleAppTodoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D59417D8296E8D4500654643 /* SimpleAppTodoStoryboard.storyboard */; };
 		D59417DB297056B600654643 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59417DA297056B600654643 /* Task.swift */; };
@@ -72,6 +75,9 @@
 		D5880CF32966B84C0043668A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		D58E043B29783DA900AB28CC /* DiaryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryStoryboard.storyboard; sourceTree = "<group>"; };
 		D58E043D29783DB400AB28CC /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
+		D58E044129784C1100AB28CC /* DiaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCell.swift; sourceTree = "<group>"; };
+		D58E044329784CA100AB28CC /* StarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
+		D58E044529784DC300AB28CC /* StarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarCell.swift; sourceTree = "<group>"; };
 		D59417D6296E8C5400654643 /* SimpleAppTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppTodoViewController.swift; sourceTree = "<group>"; };
 		D59417D8296E8D4500654643 /* SimpleAppTodoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleAppTodoStoryboard.storyboard; sourceTree = "<group>"; };
 		D59417DA297056B600654643 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -139,6 +145,9 @@
 			children = (
 				D58E043B29783DA900AB28CC /* DiaryStoryboard.storyboard */,
 				D58E043D29783DB400AB28CC /* DiaryViewController.swift */,
+				D58E044129784C1100AB28CC /* DiaryCell.swift */,
+				D58E044329784CA100AB28CC /* StarViewController.swift */,
+				D58E044529784DC300AB28CC /* StarCell.swift */,
 			);
 			path = SimpleAppDiary;
 			sourceTree = "<group>";
@@ -393,14 +402,17 @@
 				D50D3D07296D33C00083B0B3 /* AppCalViewController.swift in Sources */,
 				D5BA40712930A29200B13383 /* ViewController.swift in Sources */,
 				D5880CF42966B84C0043668A /* SettingViewController.swift in Sources */,
+				D58E044229784C1100AB28CC /* DiaryCell.swift in Sources */,
 				D5C7B8F22969BDEC00FFC994 /* SimpleAppCalculatorViewController.swift in Sources */,
 				D58E043E29783DB400AB28CC /* DiaryViewController.swift in Sources */,
 				D5856B262946318F00F7A0FB /* CodePushViewController.swift in Sources */,
 				D5880CF22966A9DB0043668A /* SimpleAppStudyLedViewController.swift in Sources */,
 				D59417DB297056B600654643 /* Task.swift in Sources */,
+				D58E044429784CA100AB28CC /* StarViewController.swift in Sources */,
 				D5BA406D2930A29200B13383 /* AppDelegate.swift in Sources */,
 				D59892E12930C22B004A5B33 /* Study2ViewController.swift in Sources */,
 				D5BA406F2930A29200B13383 /* SceneDelegate.swift in Sources */,
+				D58E044629784DC300AB28CC /* StarCell.swift in Sources */,
 				D581E0CF29375F18006F422F /* SuguePushViewController.swift in Sources */,
 				D59892DD2930AECF004A5B33 /* Content.swift in Sources */,
 				D5856B28294633F200F7A0FB /* CodePresentViewController.swift in Sources */,
