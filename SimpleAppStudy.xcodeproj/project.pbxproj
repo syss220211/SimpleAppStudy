@@ -10,6 +10,7 @@
 		D50D3D07296D33C00083B0B3 /* AppCalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50D3D06296D33C00083B0B3 /* AppCalViewController.swift */; };
 		D50D3D09296D38520083B0B3 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50D3D08296D38520083B0B3 /* RoundButton.swift */; };
 		D5313D6229792F2000085814 /* WriteDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5313D6129792F2000085814 /* WriteDiaryViewController.swift */; };
+		D5313D64297A309F00085814 /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5313D63297A309F00085814 /* DiaryDetailViewController.swift */; };
 		D5566BD7294982EE00E96730 /* SeguePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5566BD6294982EE00E96730 /* SeguePushViewController.swift */; };
 		D5566BD9294986DD00E96730 /* presentSegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5566BD8294986DD00E96730 /* presentSegueViewController.swift */; };
 		D581E0CF29375F18006F422F /* SuguePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581E0CE29375F18006F422F /* SuguePushViewController.swift */; };
@@ -67,6 +68,7 @@
 		D50D3D06296D33C00083B0B3 /* AppCalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCalViewController.swift; sourceTree = "<group>"; };
 		D50D3D08296D38520083B0B3 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		D5313D6129792F2000085814 /* WriteDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDiaryViewController.swift; sourceTree = "<group>"; };
+		D5313D63297A309F00085814 /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 		D5566BD6294982EE00E96730 /* SeguePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePushViewController.swift; sourceTree = "<group>"; };
 		D5566BD8294986DD00E96730 /* presentSegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentSegueViewController.swift; sourceTree = "<group>"; };
 		D581E0CE29375F18006F422F /* SuguePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuguePushViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				D58E044329784CA100AB28CC /* StarViewController.swift */,
 				D58E044529784DC300AB28CC /* StarCell.swift */,
 				D5313D6129792F2000085814 /* WriteDiaryViewController.swift */,
+				D5313D63297A309F00085814 /* DiaryDetailViewController.swift */,
 			);
 			path = SimpleAppDiary;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				D58E044629784DC300AB28CC /* StarCell.swift in Sources */,
 				D581E0CF29375F18006F422F /* SuguePushViewController.swift in Sources */,
 				D59892DD2930AECF004A5B33 /* Content.swift in Sources */,
+				D5313D64297A309F00085814 /* DiaryDetailViewController.swift in Sources */,
 				D5856B28294633F200F7A0FB /* CodePresentViewController.swift in Sources */,
 				D598FD9F2940994400D86A4D /* SeguePresentViewController.swift in Sources */,
 			);
