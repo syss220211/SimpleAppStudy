@@ -9,6 +9,7 @@ import UIKit
 
 class DiaryViewController: UIViewController {
 
+    @IBOutlet var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

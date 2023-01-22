@@ -45,7 +45,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DiaryCell" id="4gh-7p-jSs">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DiaryCell" id="4gh-7p-jSs" customClass="DiaryCell" customModule="SimpleAppStudy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ji4-Z4-kIp" customClass="DiaryCell" customModule="SimpleAppStudy" customModuleProvider="target">
@@ -76,6 +76,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="200"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="C7Z-eZ-cFk" id="SJp-2M-io6"/>
+                                            <outlet property="titleLabel" destination="mWu-MD-ygI" id="9U5-Bh-8rn"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -96,6 +100,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="aAf-0p-nGV" id="3aI-2G-8kQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -285,8 +292,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="일기작성" id="f55-yZ-m55">
-                        <barButtonItem key="rightBarButtonItem" title="등록" id="OkC-W2-YTC"/>
+                        <barButtonItem key="rightBarButtonItem" title="등록" id="OkC-W2-YTC">
+                            <connections>
+                                <action selector="tapConfirmButton:" destination="zCH-Xk-kAu" id="jet-B6-LCK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="confirmButton" destination="OkC-W2-YTC" id="PDg-4Y-MmA"/>
+                        <outlet property="contentsTextView" destination="tPQ-dB-HBF" id="mWa-SI-NXq"/>
+                        <outlet property="dateTextField" destination="sa9-fd-Z85" id="PnM-Y4-308"/>
+                        <outlet property="titleTextField" destination="xyl-Zd-prK" id="9oS-oZ-X0o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1c5-Sk-6Ob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
