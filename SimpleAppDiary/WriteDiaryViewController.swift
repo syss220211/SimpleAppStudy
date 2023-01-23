@@ -21,6 +21,7 @@ class WriteDiaryViewController: UIViewController {
         super.viewDidLoad()
         self.configureContentsTextView()
         self.confrigureDatePicker()
+        self.confirmButton.isEnabled = false
     }
 
     // 내용 textView에 바깥 라인 추가
