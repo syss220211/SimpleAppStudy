@@ -41,6 +41,10 @@ class WriteDiaryViewController: UIViewController {
         self.dateTextField.inputView = self.datePicker
     }
     
+    private func configureInputField() {
+        self.contentsTextView.delegate = self
+    }
+    
     @IBAction func tapConfirmButton(_ sender: UIBarButtonItem) {
     }
     
@@ -54,5 +58,15 @@ class WriteDiaryViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    private func validateInputField() {
+        self.confirmButton.isEnabled = !(self.titleTextField.text?.isEmpty ?? true) && !(self.dateTextField.text?.isEmpty ?? true) && !self.contentsTextView.text.isEmpty
+    }
+}
+
+extension WriteDiaryViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView : UITextView) {
+        self.validateInputField()
     }
 }
