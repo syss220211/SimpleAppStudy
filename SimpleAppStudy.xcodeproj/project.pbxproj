@@ -45,6 +45,7 @@
 		D5C7B8F22969BDEC00FFC994 /* SimpleAppCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C7B8F12969BDEC00FFC994 /* SimpleAppCalculatorViewController.swift */; };
 		D5F6680029463ABC00B407AA /* SampleStudyStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F667FF29463ABC00B407AA /* SampleStudyStoryboard.storyboard */; };
 		D5F6680229463AD000B407AA /* SampleStudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6680129463AD000B407AA /* SampleStudyViewController.swift */; };
+		D5F9865A2981174F007F279A /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F986592981174F007F279A /* Diary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		D5C7B8F12969BDEC00FFC994 /* SimpleAppCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppCalculatorViewController.swift; sourceTree = "<group>"; };
 		D5F667FF29463ABC00B407AA /* SampleStudyStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SampleStudyStoryboard.storyboard; sourceTree = "<group>"; };
 		D5F6680129463AD000B407AA /* SampleStudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleStudyViewController.swift; sourceTree = "<group>"; };
+		D5F986592981174F007F279A /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				D58E044529784DC300AB28CC /* StarCell.swift */,
 				D5313D6129792F2000085814 /* WriteDiaryViewController.swift */,
 				D5313D63297A309F00085814 /* DiaryDetailViewController.swift */,
+				D5F986592981174F007F279A /* Diary.swift */,
 			);
 			path = SimpleAppDiary;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				D58E043E29783DB400AB28CC /* DiaryViewController.swift in Sources */,
 				D5313D6229792F2000085814 /* WriteDiaryViewController.swift in Sources */,
 				D5856B262946318F00F7A0FB /* CodePushViewController.swift in Sources */,
+				D5F9865A2981174F007F279A /* Diary.swift in Sources */,
 				D5880CF22966A9DB0043668A /* SimpleAppStudyLedViewController.swift in Sources */,
 				D59417DB297056B600654643 /* Task.swift in Sources */,
 				D58E044429784CA100AB28CC /* StarViewController.swift in Sources */,
