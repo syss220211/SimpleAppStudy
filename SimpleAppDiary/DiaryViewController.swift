@@ -53,7 +53,7 @@ class DiaryViewController: UIViewController {
     private func loadDiaryList() {
         let userDefaults = UserDefaults.standard
         guard let data = userDefaults.object(forKey: "diaryList") as? [[String: Any]] else { return }
-        self.diaryList = data.compactMap{
+        self.diaryList = data.compactMap {
             guard let title = $0["title"] as? String else { return nil }
             guard let contents = $0["contents"] as? String else { return nil }
             guard let date = $0["date"] as? Date else { return nil }
@@ -92,6 +92,18 @@ extension DiaryViewController: UICollectionViewDataSource {
 extension DiaryViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (UIScreen.main.bounds.width / 2) - 20, height: 200)
+    }
+}
+
+extension DiaryViewController: UICollectionViewDelegate {
+    
+    // 특정 cell이 선택되었음을 알리는 method
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "DiaryDetailViewController") as? DiaryDetailViewController else { return }
+        let diary = self.diaryList[indexPath.row]
+        viewController.diary = diary
+        viewController.indexPath = indexPath
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
