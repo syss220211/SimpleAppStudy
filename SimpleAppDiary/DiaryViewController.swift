@@ -85,13 +85,18 @@ extension DiaryViewController: UICollectionViewDataSource {
         let diary = self.diaryList[indexPath.row]
         cell.titleLabel.text = diary.title
         cell.dateLabel.text = self.dateToString(date: diary.date)
+        
         return cell
     }
 }
 
 extension DiaryViewController: UICollectionViewDelegateFlowLayout {
+    // size fix
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (UIScreen.main.bounds.width / 2) - 20, height: 200)
+        
+        debugPrint("UIScreen 값 : \(UIScreen.main.bounds.width)")
+        debugPrint("collectionView 값 : \((collectionView.bounds.width / 2) - 20)")
+        return CGSize(width: (collectionView.bounds.width / 2) - 20, height: 200)
     }
 }
 
@@ -99,7 +104,9 @@ extension DiaryViewController: UICollectionViewDelegate {
     
     // 특정 cell이 선택되었음을 알리는 method
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "DiaryDetailViewController") as? DiaryDetailViewController else { return }
+        guard let viewController = self.storyboard?.instantiateViewController(identifier: "DiaryDetailViewController") as? DiaryDetailViewController else { return }
+//        guard let viewController = self.storyboard?.instantiateViewController(identifier: "DiaryDetailViewController") as? DiaryDetailViewController else { return }
+        
         let diary = self.diaryList[indexPath.row]
         viewController.diary = diary
         viewController.indexPath = indexPath
