@@ -7,11 +7,17 @@
 
 import UIKit
 
+// 일기 삭제 기능 구현
+protocol DiaryDetailViewDelegate: AnyObject {
+    func didSelectDelete(indexPath: IndexPath)
+}
+
 class DiaryDetailViewController: UIViewController {
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var contentsTextView: UITextView!
     @IBOutlet var dateLabel: UILabel!
+    weak var delegate: DiaryDetailViewDelegate?
     
     // 일기장 리스트에서 전달 받을 프로퍼티 선언
     var diary: Diary?
@@ -43,7 +49,9 @@ class DiaryDetailViewController: UIViewController {
     }
     
     @IBAction func tapDeleteButton(_ sender: UIButton) {
-        
+        guard let indexPath = self.indexPath else { return }
+        self.delegate?.didSelectDelete(indexPath: indexPath)
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
