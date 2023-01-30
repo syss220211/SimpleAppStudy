@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum DiaryEditorMode {
+    case new
+    case edit(IndexPath, Diary)
+}
+
 // delegate 정의
 // 일기장 리스트 화면에 일기가 작성된 diary 객체를 전달하기 위함
 protocol WriteDiaryViewDelegate: AnyObject {
@@ -24,14 +29,37 @@ class WriteDiaryViewController: UIViewController {
     private let datePicker = UIDatePicker()
     private var diaryDate: Date?
     weak var delegate: WriteDiaryViewDelegate?
+    var diaryEditorMode: DiaryEditorMode = .new
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureContentsTextView()
         self.confrigureDatePicker()
         self.configureInputField()
+        self.configureEditMode()
         // 아무 내용도 없을 때 등록 버튼 비활성화로 설정
         self.confirmButton.isEnabled = false
+    }
+    
+    private func configureEditMode() {
+        switch self.diaryEditorMode {
+        case let .edit(_, diary):
+            self.titleTextField.text = diary.title
+            self.contentsTextView.text = diary.contents
+            self.dateTextField.text = self.dateToString(date: diary.date)
+            self.diaryDate = diary.date
+            self.confirmButton.title = "수정"
+            
+        default:
+            break
+        }
+    }
+    
+    private func dateToString(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yy년 MM월 dd일(EEEEE)"
+        formatter.locale = Locale(identifier: "ko_KR")
+        return formatter.string(from: date)
     }
 
     // 내용 textView에 바깥 라인 추가
@@ -66,7 +94,16 @@ class WriteDiaryViewController: UIViewController {
         guard let date = self.diaryDate else { return }
         let diary = Diary(title: title, contents: contents, date: date, isStar: false)
         self.delegate?.didSelectReigster(diary: diary)
-        self.navigationController?.popViewController(animated: true) // 전화면으로 이동 되도록 
+        self.navigationController?.popViewController(animated: true) // 전화면으로 이동 되도록
+        
+        switch self.diaryEditorMode {
+        case .new:
+            self.delegate?.didSelectReigster(diary: diary)
+        case let .edit(indexPath, _):
+            NotificationCenter.default.post(name: NSNotification.Name("editDiary"), object: diary, userInfo: [
+                "indexPath.row": indexPath.row])
+//            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     // 제목 textfield에 text가 입력될 때마다 호출되는 method

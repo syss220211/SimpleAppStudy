@@ -224,7 +224,7 @@
         <!--일기작성-->
         <scene sceneID="oEV-vJ-Lc1">
             <objects>
-                <viewController id="zCH-Xk-kAu" customClass="WriteDiaryViewController" customModule="SimpleAppStudy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WriteDiaryViewController" id="zCH-Xk-kAu" customClass="WriteDiaryViewController" customModule="SimpleAppStudy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qbp-sA-ZhD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
