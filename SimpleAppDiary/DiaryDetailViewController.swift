@@ -10,6 +10,9 @@ import UIKit
 // 일기 삭제 기능 구현
 protocol DiaryDetailViewDelegate: AnyObject {
     func didSelectDelete(indexPath: IndexPath)
+    
+    // 즐겨찾기 delegate
+    func didSelectStart(indexPath: IndexPath, isStar: Bool)
 }
 
 class DiaryDetailViewController: UIViewController {
@@ -17,6 +20,9 @@ class DiaryDetailViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var contentsTextView: UITextView!
     @IBOutlet var dateLabel: UILabel!
+    // 즐겨찾기
+    var starButton: UIBarButtonItem?
+    
     weak var delegate: DiaryDetailViewDelegate?
     
     // 일기장 리스트에서 전달 받을 프로퍼티 선언
@@ -34,6 +40,10 @@ class DiaryDetailViewController: UIViewController {
         self.titleLabel.text = diary.title
         self.contentsTextView.text = diary.contents
         self.dateLabel.text = self.dateToString(date: diary.date)
+        self.starButton = UIBarButtonItem(image: nil, style: .plain, target: self, action: #selector(tapStarButton))
+        self.starButton?.image = diary.isStar ? UIImage(systemName: "star.fill") : UIImage(systemName: "star")
+        self.starButton?.tintColor = .systemPink
+        self.navigationItem.rightBarButtonItem = self.starButton
     }
     
     private func dateToString(date: Date) -> String {
@@ -69,6 +79,19 @@ class DiaryDetailViewController: UIViewController {
         guard let indexPath = self.indexPath else { return }
         self.delegate?.didSelectDelete(indexPath: indexPath)
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func tapStarButton() {
+        // 즐겨찾기 토글
+        guard let isStar = self.diary?.isStar else { return }
+        guard let indexPath = self.indexPath else { return }
+        if isStar {
+            self.starButton?.image = UIImage(systemName: "star")
+        } else {
+            self.starButton?.image = UIImage(systemName: "star.fill")
+        }
+        self.diary?.isStar = !isStar
+        self.delegate?.didSelectStart(indexPath: indexPath, isStar: self.diary?.isStar ?? false)
     }
     
     deinit {
