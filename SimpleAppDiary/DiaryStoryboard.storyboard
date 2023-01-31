@@ -152,14 +152,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dtp-2o-jEm">
-                                <rect key="frame" x="-54" y="208" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dtp-2o-jEm" id="3o2-2T-nIX">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x7l-L1-tgB">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -202,6 +194,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="393" height="80"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="OAm-hF-QUD" id="7vM-va-c6K"/>
+                                            <outlet property="titleLabel" destination="cxd-Df-c3S" id="bM2-yR-aIi"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -216,6 +212,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mKw-Mi-EEB"/>
+                    <connections>
+                        <outlet property="collectionView" destination="x7l-L1-tgB" id="Uba-YD-4Me"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f17-BF-C5J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
