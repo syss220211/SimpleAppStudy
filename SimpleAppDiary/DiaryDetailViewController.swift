@@ -91,7 +91,14 @@ class DiaryDetailViewController: UIViewController {
             self.starButton?.image = UIImage(systemName: "star.fill")
         }
         self.diary?.isStar = !isStar
-        self.delegate?.didSelectStart(indexPath: indexPath, isStar: self.diary?.isStar ?? false)
+//        self.delegate?.didSelectStart(indexPath: indexPath, isStar: self.diary?.isStar ?? false)
+        NotificationCenter.default.post(
+            name: NSNotification.Name("starDiary"),
+            object: [
+                "isStar": self.diary?.isStar ?? false,
+                "indexPath" : indexPath
+            ],
+        userInfo: nil)
     }
     
     deinit {
