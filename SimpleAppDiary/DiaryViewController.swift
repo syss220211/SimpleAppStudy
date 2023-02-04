@@ -26,6 +26,7 @@ class DiaryViewController: UIViewController {
             selector: #selector(editDiaryNotification(_:)),
             name: NSNotification.Name("editDiary"),
             object: nil)
+//        Notification 추가하기
     }
     
     private func configureCollectionView() {
