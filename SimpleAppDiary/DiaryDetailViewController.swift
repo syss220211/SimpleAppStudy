@@ -8,12 +8,12 @@
 import UIKit
 
 // 일기 삭제 기능 구현
-protocol DiaryDetailViewDelegate: AnyObject {
-    func didSelectDelete(indexPath: IndexPath)
-    
+//protocol DiaryDetailViewDelegate: AnyObject {
+//    func didSelectDelete(indexPath: IndexPath)
+//
     // 즐겨찾기 delegate
-    func didSelectStart(indexPath: IndexPath, isStar: Bool)
-}
+//    func didSelectStart(indexPath: IndexPath, isStar: Bool)
+//}
 
 class DiaryDetailViewController: UIViewController {
 
@@ -23,7 +23,7 @@ class DiaryDetailViewController: UIViewController {
     // 즐겨찾기
     var starButton: UIBarButtonItem?
     
-    weak var delegate: DiaryDetailViewDelegate?
+//    weak var delegate: DiaryDetailViewDelegate?
     
     // 일기장 리스트에서 전달 받을 프로퍼티 선언
     var diary: Diary?
@@ -77,7 +77,12 @@ class DiaryDetailViewController: UIViewController {
     
     @IBAction func tapDeleteButton(_ sender: UIButton) {
         guard let indexPath = self.indexPath else { return }
-        self.delegate?.didSelectDelete(indexPath: indexPath)
+//        self.delegate?.didSelectDelete(indexPath: indexPath)
+        NotificationCenter.default.post(
+            name: NSNotification.Name("deleteDiary"),
+            object: indexPath,
+            userInfo: nil
+        )
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -92,9 +97,10 @@ class DiaryDetailViewController: UIViewController {
         }
         self.diary?.isStar = !isStar
 //        self.delegate?.didSelectStart(indexPath: indexPath, isStar: self.diary?.isStar ?? false)
-        NotificationCenter.default.post(
+        NotificationCenter.default.post( // notificationCenter 이용하기
             name: NSNotification.Name("starDiary"),
             object: [
+                "diary" : self.diary,
                 "isStar": self.diary?.isStar ?? false,
                 "indexPath" : indexPath
             ],

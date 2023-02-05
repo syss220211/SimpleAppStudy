@@ -92,18 +92,23 @@ class WriteDiaryViewController: UIViewController {
         guard let title = self.titleTextField.text else { return }
         guard let contents = self.contentsTextView.text else { return }
         guard let date = self.diaryDate else { return }
-        let diary = Diary(title: title, contents: contents, date: date, isStar: false)
-        self.delegate?.didSelectReigster(diary: diary)
-        self.navigationController?.popViewController(animated: true) // 전화면으로 이동 되도록
+//        self.delegate?.didSelectReigster(diary: diary)
         
         switch self.diaryEditorMode {
         case .new:
+            let diary = Diary(title: title, contents: contents, date: date, isStar: false)
             self.delegate?.didSelectReigster(diary: diary)
-        case let .edit(indexPath, _):
-            NotificationCenter.default.post(name: NSNotification.Name("editDiary"), object: diary, userInfo: [
-                "indexPath.row": indexPath.row])
-//            self.navigationController?.popViewController(animated: true)
+        
+        case let .edit(indexPath, diary):
+            let diary = Diary(title: title, contents: contents, date: date, isStar: diary.isStar)
+            NotificationCenter.default.post(
+                name: NSNotification.Name("editDiary"),
+                object: diary,
+                userInfo: [
+                "indexPath.row": indexPath.row
+                ])
         }
+        self.navigationController?.popViewController(animated: true) // 전화면으로 이동 되도록
     }
     
     // 제목 textfield에 text가 입력될 때마다 호출되는 method

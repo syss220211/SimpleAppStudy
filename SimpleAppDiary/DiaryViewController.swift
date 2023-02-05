@@ -25,8 +25,19 @@ class DiaryViewController: UIViewController {
             self,
             selector: #selector(editDiaryNotification(_:)),
             name: NSNotification.Name("editDiary"),
+            object: nil
+        )
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(starDiaryNotification),
+            name: NSNotification.Name("starDiary"),
+            object: nil
+        )
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(deleteDiaryNotification(_:)),
+            name: Notification.Name("deleteDiary"),
             object: nil)
-//        Notification 추가하기
     }
     
     private func configureCollectionView() {
@@ -44,6 +55,19 @@ class DiaryViewController: UIViewController {
             $0.date.compare($1.date) == .orderedDescending
         })
         self.collectionView.reloadData()
+    }
+    
+    @objc func deleteDiaryNotification(_ notification: Notification) {
+        guard let indexPath = notification.object as? IndexPath else { return }
+        self.diaryList.remove(at: indexPath.row)
+        self.collectionView.deleteItems(at: [indexPath])
+    }
+    
+    @objc func starDiaryNotification(_ notification: Notification) {
+        guard let starDiary = notification.object as? [String: Any] else { return }
+        guard let isStar = starDiary["isStar"] as? Bool else { return }
+        guard let indexPath = starDiary["indexPath"] as? IndexPath else { return }
+        self.diaryList[indexPath.row].isStar = isStar
     }
     
     // 세그웨이 이용
@@ -127,7 +151,7 @@ extension DiaryViewController: UICollectionViewDelegate {
         viewController.diary = diary
         viewController.indexPath = indexPath
         // 삭제 기능
-        viewController.delegate = self
+//        viewController.delegate = self
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -141,14 +165,14 @@ extension DiaryViewController: WriteDiaryViewDelegate {
         self.collectionView.reloadData()
     }
 }
-
-extension DiaryViewController: DiaryDetailViewDelegate {
-    func didSelectDelete(indexPath: IndexPath) {
-        self.diaryList.remove(at: indexPath.row)
-        self.collectionView.deleteItems(at: [indexPath])
-    }
+//
+//extension DiaryViewController: DiaryDetailViewDelegate {
+//    func didSelectDelete(indexPath: IndexPath) {
+//        self.diaryList.remove(at: indexPath.row)
+//        self.collectionView.deleteItems(at: [indexPath])
+//    }
     
-    func didSelectStart(indexPath: IndexPath, isStar: Bool) {
-        self.diaryList[indexPath.row].isStar = isStar
-    }
-}
+//    func didSelectStart(indexPath: IndexPath, isStar: Bool) {
+//        self.diaryList[indexPath.row].isStar = isStar
+//    }
+//}
