@@ -62,8 +62,8 @@ class DiaryViewController: UIViewController {
 //        guard let indexPath = notification.object as? IndexPath else { return }
 //        self.diaryList.remove(at: indexPath.row)
 //        self.collectionView.deleteItems(at: [indexPath])
-        guard let uuisString = notification.object as? String else { return }
-        guard let index = self.diaryList.first(where: { $0.uuidString == uuisString }) else { return }
+        guard let uuidString = notification.object as? String else { return }
+        guard let index = self.diaryList.firstIndex(where: { $0.uuidString == uuidString }) else { return }
         self.diaryList.remove(at: index)
         self.collectionView.deleteItems(at: [IndexPath(row: index, section: 0)])
     }
