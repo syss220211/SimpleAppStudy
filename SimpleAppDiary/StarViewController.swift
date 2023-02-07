@@ -64,6 +64,7 @@ class StarViewController: UIViewController {
         self.diaryList = data.compactMap {
 //            guard let title = $0["title"] as? String else { return nil }
 //            guard let title = $0["title"] as? String else { return nil }
+            guard let uuidString = $0["uuidString"] as? UUID else { return nil }
             guard let title = $0["title"] as? String else { return nil }
             guard let contents = $0["contents"] as? String else { return nil}
             guard let date = $0["date"] as? Date else { return nil }

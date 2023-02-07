@@ -76,11 +76,11 @@ class DiaryDetailViewController: UIViewController {
     }
     
     @IBAction func tapDeleteButton(_ sender: UIButton) {
-        guard let indexPath = self.indexPath else { return }
+        guard let uuidString = self.diary?.uuidString else { return }
 //        self.delegate?.didSelectDelete(indexPath: indexPath)
         NotificationCenter.default.post(
             name: NSNotification.Name("deleteDiary"),
-            object: indexPath,
+            object: uuidString,
             userInfo: nil
         )
         self.navigationController?.popViewController(animated: true)
@@ -89,7 +89,7 @@ class DiaryDetailViewController: UIViewController {
     @objc func tapStarButton() {
         // 즐겨찾기 토글
         guard let isStar = self.diary?.isStar else { return }
-        guard let indexPath = self.indexPath else { return }
+//        guard let indexPath = self.indexPath else { return }
         if isStar {
             self.starButton?.image = UIImage(systemName: "star")
         } else {
@@ -102,7 +102,7 @@ class DiaryDetailViewController: UIViewController {
             object: [
                 "diary" : self.diary,
                 "isStar": self.diary?.isStar ?? false,
-                "indexPath" : indexPath
+                "uuidString" : diary?.uuidString
             ],
         userInfo: nil)
     }
