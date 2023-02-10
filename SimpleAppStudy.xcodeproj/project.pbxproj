@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D50D3D07296D33C00083B0B3 /* AppCalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50D3D06296D33C00083B0B3 /* AppCalViewController.swift */; };
 		D50D3D09296D38520083B0B3 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50D3D08296D38520083B0B3 /* RoundButton.swift */; };
+		D51566C629963828005438F5 /* PomodoroStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D51566C529963828005438F5 /* PomodoroStoryboard.storyboard */; };
+		D51566C829963846005438F5 /* PomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51566C729963846005438F5 /* PomodoroViewController.swift */; };
 		D5313D6229792F2000085814 /* WriteDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5313D6129792F2000085814 /* WriteDiaryViewController.swift */; };
 		D5313D64297A309F00085814 /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5313D63297A309F00085814 /* DiaryDetailViewController.swift */; };
 		D5566BD7294982EE00E96730 /* SeguePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5566BD6294982EE00E96730 /* SeguePushViewController.swift */; };
@@ -68,6 +70,8 @@
 /* Begin PBXFileReference section */
 		D50D3D06296D33C00083B0B3 /* AppCalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCalViewController.swift; sourceTree = "<group>"; };
 		D50D3D08296D38520083B0B3 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		D51566C529963828005438F5 /* PomodoroStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PomodoroStoryboard.storyboard; sourceTree = "<group>"; };
+		D51566C729963846005438F5 /* PomodoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroViewController.swift; sourceTree = "<group>"; };
 		D5313D6129792F2000085814 /* WriteDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDiaryViewController.swift; sourceTree = "<group>"; };
 		D5313D63297A309F00085814 /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 		D5566BD6294982EE00E96730 /* SeguePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePushViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +140,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D51566C4299637DB005438F5 /* SimplePomodoro */ = {
+			isa = PBXGroup;
+			children = (
+				D51566C529963828005438F5 /* PomodoroStoryboard.storyboard */,
+				D51566C729963846005438F5 /* PomodoroViewController.swift */,
+			);
+			path = SimplePomodoro;
+			sourceTree = "<group>";
+		};
 		D5880CEC2966A97E0043668A /* SimpleAppStudyLed */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +200,7 @@
 		D5BA40602930A29200B13383 = {
 			isa = PBXGroup;
 			children = (
+				D51566C4299637DB005438F5 /* SimplePomodoro */,
 				D58E043A29783D7E00AB28CC /* SimpleAppDiary */,
 				D59417D5296E8C2D00654643 /* SimpleAppTodo */,
 				D5C7B8EE2969BD9C00FFC994 /* SimpleAppCalculator */,
@@ -373,6 +387,7 @@
 				D5C7B8F02969BDD700FFC994 /* SimpleAppCalculatorStoryboard.storyboard in Resources */,
 				D5880CF02966A9CC0043668A /* SimpleAppStudyLedStoryboard.storyboard in Resources */,
 				D5BA40762930A29200B13383 /* Assets.xcassets in Resources */,
+				D51566C629963828005438F5 /* PomodoroStoryboard.storyboard in Resources */,
 				D59892E32930C30F004A5B33 /* Study2Storyboard.storyboard in Resources */,
 				D5F6680029463ABC00B407AA /* SampleStudyStoryboard.storyboard in Resources */,
 				D5BA40742930A29200B13383 /* Main.storyboard in Resources */,
@@ -407,6 +422,7 @@
 				D5A7CBDE295DE28100C29777 /* CodePushTestViewController.swift in Sources */,
 				D5566BD9294986DD00E96730 /* presentSegueViewController.swift in Sources */,
 				D5F6680229463AD000B407AA /* SampleStudyViewController.swift in Sources */,
+				D51566C829963846005438F5 /* PomodoroViewController.swift in Sources */,
 				D5566BD7294982EE00E96730 /* SeguePushViewController.swift in Sources */,
 				D50D3D07296D33C00083B0B3 /* AppCalViewController.swift in Sources */,
 				D5BA40712930A29200B13383 /* ViewController.swift in Sources */,
