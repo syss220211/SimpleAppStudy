@@ -28,12 +28,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ojc-NY-eCE">
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ojc-NY-eCE">
                                 <rect key="frame" x="48" y="353" width="297" height="4"/>
                             </progressView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1t-TQ-Hns">
                                 <rect key="frame" x="0.0" y="213" width="393" height="216"/>
                             </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="wSH-7R-NBg">
+                                <rect key="frame" x="24" y="453" width="345" height="34.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2p-Ub-8nZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="취소"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lro-Y1-7LZ">
+                                        <rect key="frame" x="212.66666666666663" y="0.0" width="132.33333333333337" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="시작"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,10 +60,13 @@
                             <constraint firstItem="u1t-TQ-Hns" firstAttribute="top" secondItem="dFF-lS-qsc" secondAttribute="bottom" constant="30" id="HJt-TP-yuZ"/>
                             <constraint firstItem="u1t-TQ-Hns" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="Ki1-jL-Gqh"/>
                             <constraint firstItem="f2p-rq-p49" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Oeg-Hz-MGH"/>
+                            <constraint firstItem="wSH-7R-NBg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="X0T-dx-MRq"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="f2p-rq-p49" secondAttribute="trailing" constant="24" id="duS-yW-RzD"/>
                             <constraint firstItem="Ojc-NY-eCE" firstAttribute="top" secondItem="f2p-rq-p49" secondAttribute="bottom" constant="30" id="f9n-eG-FnN"/>
                             <constraint firstItem="Ojc-NY-eCE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="48" id="kS8-vS-p1j"/>
                             <constraint firstItem="dFF-lS-qsc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="n9c-p1-gUf"/>
+                            <constraint firstItem="wSH-7R-NBg" firstAttribute="top" secondItem="u1t-TQ-Hns" secondAttribute="bottom" constant="24" id="tSj-n5-VAM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wSH-7R-NBg" secondAttribute="trailing" constant="24" id="wdW-si-Ttu"/>
                         </constraints>
                     </view>
                 </viewController>
