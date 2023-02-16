@@ -10,7 +10,7 @@
         <!--PomodoroViewController-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController title="PomodoroViewController" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController title="PomodoroViewController" id="Y6W-OH-hqX" customClass="PomodoroViewController" customModule="SimpleAppStudy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,6 +69,13 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wSH-7R-NBg" secondAttribute="trailing" constant="24" id="wdW-si-Ttu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="m2p-Ub-8nZ" id="QMo-cg-UQU"/>
+                        <outlet property="datePicker" destination="u1t-TQ-Hns" id="3KL-7k-xCY"/>
+                        <outlet property="progreeView" destination="Ojc-NY-eCE" id="4SN-Wz-Val"/>
+                        <outlet property="timerLabel" destination="f2p-rq-p49" id="i2u-fP-EzJ"/>
+                        <outlet property="toggleButton" destination="Lro-Y1-7LZ" id="mVZ-9D-VrS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
