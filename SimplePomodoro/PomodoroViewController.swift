@@ -21,4 +21,12 @@ class PomodoroViewController: UIViewController {
 
         
     }
+    
+    @IBAction func tapCancelButton(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func tapToggleButton(_ sender: UIButton) {
+        
+    }
 }

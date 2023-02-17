@@ -41,11 +41,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="취소"/>
+                                        <connections>
+                                            <action selector="tapCancelButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2rl-ym-dy5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lro-Y1-7LZ">
                                         <rect key="frame" x="212.66666666666663" y="0.0" width="132.33333333333337" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="시작"/>
+                                        <connections>
+                                            <action selector="tapToggleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KVU-1H-DWH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
