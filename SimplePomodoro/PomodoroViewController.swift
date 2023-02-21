@@ -40,7 +40,17 @@ class PomodoroViewController: UIViewController {
     }
     
     @IBAction func tapCancelButton(_ sender: UIButton) {
-        
+        switch self.timerStatus {
+        case .start, .pause:
+            self.timerStatus = .end
+            self.cancelButton.isEnabled = false
+            self.setTimerInfoViewVisble(isHidden: true)
+            self.datePicker.isHidden = false
+            self.toggleButton.isSelected = false
+            
+        default:
+            break
+        }
     }
     
     func configureToggleButton() {
@@ -60,6 +70,11 @@ class PomodoroViewController: UIViewController {
             
         case .start:
             self.timerStatus = .pause
+            self.toggleButton.isSelected = false
+            
+        case .pause:
+            self.timerStatus = .start
+            self.toggleButton.isSelected = true
     
         default:
             break
