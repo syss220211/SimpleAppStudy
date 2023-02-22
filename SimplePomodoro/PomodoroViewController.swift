@@ -24,7 +24,7 @@ class PomodoroViewController: UIViewController {
     
     // 타이머 시간 초로 저장하는 프로퍼티
     var duration = 60
-    var timerStatus: TimerStatus = .end // 타이머 상태를 갖고 있는 프로퍼티
+    var timerStatus: TimerStatus = .end // 타이머 상태를 갖고 있는 프로퍼티(초기값 = end)
     
     
     override func viewDidLoad() {
@@ -33,26 +33,28 @@ class PomodoroViewController: UIViewController {
         
     }
     
-    //
+    // 타이머와 프로그래스바 hidden의 상태를 위한 함수
     func setTimerInfoViewVisble(isHidden: Bool) {
         self.timerLabel.isHidden = isHidden
         self.progreeView.isHidden = isHidden
     }
     
+    // 취소 버튼 : 데이터피커, 취소 버튼 활성화, 타이머와 프로그래스 뷰가 비활성화, toggle button 시작으로 변경
     @IBAction func tapCancelButton(_ sender: UIButton) {
         switch self.timerStatus {
-        case .start, .pause:
-            self.timerStatus = .end
-            self.cancelButton.isEnabled = false
-            self.setTimerInfoViewVisble(isHidden: true)
-            self.datePicker.isHidden = false
-            self.toggleButton.isSelected = false
+        case .start, .pause: // 시작된 상태나 일시정지 상태라면 타이머 종료
+            self.timerStatus = .end // 상태 : 종료
+            self.cancelButton.isEnabled = false // 취소버튼 비활성화
+            self.setTimerInfoViewVisble(isHidden: true) // 타이머 표시 라벨, 프로그래스바 비활성화
+            self.datePicker.isHidden = false // 데이터피커 표시되게 만들기
+            self.toggleButton.isSelected = false // toggle button title 시작으로 변경
             
         default:
             break
         }
     }
     
+    // 버튼의 상태에 따른 버튼 이름 변경을 위한 함수
     func configureToggleButton() {
         self.toggleButton.setTitle("시작", for: .normal)
         self.toggleButton.setTitle("일시정시", for: .selected)
@@ -65,20 +67,16 @@ class PomodoroViewController: UIViewController {
             self.timerStatus = .start
             self.setTimerInfoViewVisble(isHidden: false) // 타이머 라벨, 프로그래스바 표시되도록 만들기
             self.datePicker.isHidden = true // datepicker 사라지게 만들기
-            self.toggleButton.isSelected = true
-            self.cancelButton.isEnabled = true
+            self.toggleButton.isSelected = true // 버튼의 title 일시정지
+            self.cancelButton.isEnabled = true // 취소 버튼 활성화
             
         case .start:
-            self.timerStatus = .pause
-            self.toggleButton.isSelected = false
+            self.timerStatus = .pause // 시작 버튼 누르면 시작 상태 -> 일시정지 상태
+            self.toggleButton.isSelected = false // toggle button title이 시작이 되도록 만들기
             
         case .pause:
-            self.timerStatus = .start
-            self.toggleButton.isSelected = true
-    
-        default:
-            break
-            
+            self.timerStatus = .start // 일시정지 버튼 누르면 일시정지 상태 -> 시작 상태
+            self.toggleButton.isSelected = true // toggle button title이 일시정지가 되도록 만들기
         }
     }
 }
