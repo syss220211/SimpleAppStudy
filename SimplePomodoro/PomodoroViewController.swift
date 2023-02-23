@@ -25,7 +25,8 @@ class PomodoroViewController: UIViewController {
     // 타이머 시간 초로 저장하는 프로퍼티
     var duration = 60
     var timerStatus: TimerStatus = .end // 타이머 상태를 갖고 있는 프로퍼티(초기값 = end)
-    
+    var timer: DispatchSourceTimer? // timer 프로퍼티 선언
+    var currentSeconds = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +59,16 @@ class PomodoroViewController: UIViewController {
     func configureToggleButton() {
         self.toggleButton.setTitle("시작", for: .normal)
         self.toggleButton.setTitle("일시정시", for: .selected)
+    }
+    
+    func startTimer() {
+        if self.timer == nil {
+            self.timer = DispatchSource.makeTimerSource(flags: [], queue: main)
+            self.timer?.schedule(deadline: .now(), repeating: 1)
+            self.timer?.setEventHandler(handler: {
+                
+            })
+        }
     }
     
     @IBAction func tapToggleButton(_ sender: UIButton) {
