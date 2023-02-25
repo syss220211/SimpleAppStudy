@@ -63,11 +63,18 @@ class PomodoroViewController: UIViewController {
     
     func startTimer() {
         if self.timer == nil {
-            self.timer = DispatchSource.makeTimerSource(flags: [], queue: main)
+            self.timer = DispatchSource.makeTimerSource(flags: [], queue: .main)
             self.timer?.schedule(deadline: .now(), repeating: 1)
-            self.timer?.setEventHandler(handler: {
+            self.timer?.setEventHandler(handler: { [weak self] in
+                self?.currentSeconds -= 1
+                debugPrint(self?.currentSeconds)
                 
+                if self?.currentSeconds ?? 0 <= 0 {
+                    // 타이머 종료
+                    
+                }
             })
+            self.timer?.resume() // 타이머 시작
         }
     }
     
@@ -75,6 +82,7 @@ class PomodoroViewController: UIViewController {
         self.duration = Int(self.datePicker.countDownDuration) // datepicker 선택 시간 초 단위로 알려줌
         switch self.timerStatus {
         case .end:
+            self.currentSeconds = self.duration
             self.timerStatus = .start
             self.setTimerInfoViewVisble(isHidden: false) // 타이머 라벨, 프로그래스바 표시되도록 만들기
             self.datePicker.isHidden = true // datepicker 사라지게 만들기
