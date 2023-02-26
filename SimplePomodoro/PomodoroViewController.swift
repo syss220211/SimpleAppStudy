@@ -25,8 +25,8 @@ class PomodoroViewController: UIViewController {
     // 타이머 시간 초로 저장하는 프로퍼티
     var duration = 60
     var timerStatus: TimerStatus = .end // 타이머 상태를 갖고 있는 프로퍼티(초기값 = end)
-    var timer: DispatchSourceTimer? // timer 프로퍼티 선언
-    var currentSeconds = 0
+    var timer: DispatchSourceTimer? // timer 프로퍼티 선언 - Dispatch 사용
+    var currentSeconds = 0 // 현재 count down 되고 있는 시간을 초로 저장하는 프로퍼티
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +44,12 @@ class PomodoroViewController: UIViewController {
     @IBAction func tapCancelButton(_ sender: UIButton) {
         switch self.timerStatus {
         case .start, .pause: // 시작된 상태나 일시정지 상태라면 타이머 종료
-            self.timerStatus = .end // 상태 : 종료
-            self.cancelButton.isEnabled = false // 취소버튼 비활성화
-            self.setTimerInfoViewVisble(isHidden: true) // 타이머 표시 라벨, 프로그래스바 비활성화
-            self.datePicker.isHidden = false // 데이터피커 표시되게 만들기
-            self.toggleButton.isSelected = false // toggle button title 시작으로 변경
+//            self.timerStatus = .end // 상태 : 종료
+//            self.cancelButton.isEnabled = false // 취소버튼 비활성화
+//            self.setTimerInfoViewVisble(isHidden: true) // 타이머 표시 라벨, 프로그래스바 비활성화
+//            self.datePicker.isHidden = false // 데이터피커 표시되게 만들기
+//            self.toggleButton.isSelected = false // toggle button title 시작으로 변경
+            self.stopTimer()
             
         default:
             break
@@ -61,21 +62,37 @@ class PomodoroViewController: UIViewController {
         self.toggleButton.setTitle("일시정시", for: .selected)
     }
     
+    // 타이머 시작 및 구현 method
     func startTimer() {
         if self.timer == nil {
-            self.timer = DispatchSource.makeTimerSource(flags: [], queue: .main)
-            self.timer?.schedule(deadline: .now(), repeating: 1)
-            self.timer?.setEventHandler(handler: { [weak self] in
-                self?.currentSeconds -= 1
+            self.timer = DispatchSource.makeTimerSource(flags: [], queue: .main) // 타이머 인스턴스 생성
+            // 타이머가 돌때마다 ui를 업데이트 해야하기 때문에 queue에 main 쓰레드 사용
+            self.timer?.schedule(deadline: .now(), repeating: 1) // 어떤 주기로 타이머를 실행할 것인지 설정
+            self.timer?.setEventHandler(handler: { [weak self] in // 타이머와 함께 연동되는 이벤트 핸들러 할당
+                // 타이머 동작할 때마다 해당 handler closer 함수 호출
+                self?.currentSeconds -= 1 //1초에 한번씩 currentSeconds 1씩 감소
                 debugPrint(self?.currentSeconds)
                 
                 if self?.currentSeconds ?? 0 <= 0 {
                     // 타이머 종료
-                    
+                    self?.stopTimer()
                 }
             })
-            self.timer?.resume() // 타이머 시작
+            self.timer?.resume() // 타이머 시잗
         }
+    }
+    
+    func stopTimer() {
+        if self.timerStatus == .pause{
+            self.timer?.resume()
+        }
+        self.timerStatus = .end // 상태 : 종료
+        self.cancelButton.isEnabled = false // 취소버튼 비활성화
+        self.setTimerInfoViewVisble(isHidden: true) // 타이머 표시 라벨, 프로그래스바 비활성화
+        self.datePicker.isHidden = false // 데이터피커 표시되게 만들기
+        self.toggleButton.isSelected = false // toggle button title 시작으로 변경
+        self.timer?.cancel()
+        self.timer = nil // nil 할당 메모리 종료 *필수
     }
     
     @IBAction func tapToggleButton(_ sender: UIButton) {
@@ -88,14 +105,17 @@ class PomodoroViewController: UIViewController {
             self.datePicker.isHidden = true // datepicker 사라지게 만들기
             self.toggleButton.isSelected = true // 버튼의 title 일시정지
             self.cancelButton.isEnabled = true // 취소 버튼 활성화
+            self.startTimer() // 타이머 기능
             
         case .start:
             self.timerStatus = .pause // 시작 버튼 누르면 시작 상태 -> 일시정지 상태
             self.toggleButton.isSelected = false // toggle button title이 시작이 되도록 만들기
+            self.timer?.suspend() // 일시정시 기능
             
         case .pause:
             self.timerStatus = .start // 일시정지 버튼 누르면 일시정지 상태 -> 시작 상태
             self.toggleButton.isSelected = true // toggle button title이 일시정지가 되도록 만들기
+            self.timer?.resume() // 타이머 시작
         }
     }
 }
