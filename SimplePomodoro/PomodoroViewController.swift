@@ -6,6 +6,8 @@
 //
 
 import UIKit
+// 알람 소리 구현
+import AudioToolbox
 
 // 프로그래스 바 상태 enum
 enum TimerStatus {
@@ -82,6 +84,7 @@ class PomodoroViewController: UIViewController {
                 if self.currentSeconds <= 0 {
                     // 타이머 종료
                     self.stopTimer()
+                    AudioServicesPlaySystemSound(1005)
                 }
             })
             self.timer?.resume() // 타이머 시잗
