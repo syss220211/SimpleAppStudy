@@ -69,13 +69,19 @@ class PomodoroViewController: UIViewController {
             // 타이머가 돌때마다 ui를 업데이트 해야하기 때문에 queue에 main 쓰레드 사용
             self.timer?.schedule(deadline: .now(), repeating: 1) // 어떤 주기로 타이머를 실행할 것인지 설정
             self.timer?.setEventHandler(handler: { [weak self] in // 타이머와 함께 연동되는 이벤트 핸들러 할당
-                // 타이머 동작할 때마다 해당 handler closer 함수 호출
-                self?.currentSeconds -= 1 //1초에 한번씩 currentSeconds 1씩 감소
-                debugPrint(self?.currentSeconds)
+                guard let self = self else { return }
                 
-                if self?.currentSeconds ?? 0 <= 0 {
+                // 타이머 동작할 때마다 해당 handler closer 함수 호출
+                self.currentSeconds -= 1 //1초에 한번씩 currentSeconds 1씩 감소
+                let hour = self.currentSeconds / 3600
+                let minutes = (self.currentSeconds % 3600) / 60
+                let seconds = (self.currentSeconds % 3600) % 60 // 시, 분, 초 계산
+                self.timerLabel.text = String(format: "%02d:%02d:%02d", hour, minutes, seconds)
+                self.progreeView.progress = Float(self.currentSeconds) / Float(self.duration)
+                
+                if self.currentSeconds <= 0 {
                     // 타이머 종료
-                    self?.stopTimer()
+                    self.stopTimer()
                 }
             })
             self.timer?.resume() // 타이머 시잗
