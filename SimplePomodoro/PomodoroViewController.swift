@@ -24,6 +24,7 @@ class PomodoroViewController: UIViewController {
     @IBOutlet var cancelButton: UIButton!
     @IBOutlet var toggleButton: UIButton!
     
+    @IBOutlet var imageView: UIImageView!
     // 타이머 시간 초로 저장하는 프로퍼티
     var duration = 60
     var timerStatus: TimerStatus = .end // 타이머 상태를 갖고 있는 프로퍼티(초기값 = end)
@@ -80,6 +81,14 @@ class PomodoroViewController: UIViewController {
                 let seconds = (self.currentSeconds % 3600) % 60 // 시, 분, 초 계산
                 self.timerLabel.text = String(format: "%02d:%02d:%02d", hour, minutes, seconds)
                 self.progreeView.progress = Float(self.currentSeconds) / Float(self.duration)
+                UIView.animate(withDuration: 0.5, delay: 0) {
+                    self.imageView.transform = CGAffineTransform(rotationAngle: .pi) //뷰를 (pi = )180도 회전
+                    // CGAffineTransform : 구조체 : 뷰의 프레임 계산없이 2d 그래픽을 그릴수 있다.
+                }
+                UIView.animate(withDuration: 0.5, delay: 0.5, animations: { // 0.5초 뒤로 주는 형태로 하여 360(pi*2)로 돌도록 보이게 animate 효과주기
+                    
+                    self.imageView.transform = CGAffineTransform(rotationAngle: .pi * 2) // 360도 회전되도록 만들기
+                })
                 
                 if self.currentSeconds <= 0 {
                     // 타이머 종료
@@ -97,8 +106,15 @@ class PomodoroViewController: UIViewController {
         }
         self.timerStatus = .end // 상태 : 종료
         self.cancelButton.isEnabled = false // 취소버튼 비활성화
-        self.setTimerInfoViewVisble(isHidden: true) // 타이머 표시 라벨, 프로그래스바 비활성화
-        self.datePicker.isHidden = false // 데이터피커 표시되게 만들기
+//        self.setTimerInfoViewVisble(isHidden: true) // 타이머 표시 라벨, 프로그래스바 비활성화
+//        self.datePicker.isHidden = false // 데이터피커 표시되게 만들기
+        // animate 기능 추가
+        UIView.animate(withDuration: 0.5, delay: 0.3) {
+            self.timerLabel.alpha = 0
+            self.progreeView.alpha = 0
+            self.datePicker.alpha = 1
+            self.imageView.transform = .identity // 이미지 원상태 복구
+        }
         self.toggleButton.isSelected = false // toggle button title 시작으로 변경
         self.timer?.cancel()
         self.timer = nil // nil 할당 메모리 종료 *필수
@@ -110,8 +126,14 @@ class PomodoroViewController: UIViewController {
         case .end:
             self.currentSeconds = self.duration
             self.timerStatus = .start
-            self.setTimerInfoViewVisble(isHidden: false) // 타이머 라벨, 프로그래스바 표시되도록 만들기
-            self.datePicker.isHidden = true // datepicker 사라지게 만들기
+//            self.setTimerInfoViewVisble(isHidden: false) // 타이머 라벨, 프로그래스바 표시되도록 만들기
+//            self.datePicker.isHidden = true // datepicker 사라지게 만들기
+            // 애니메이션 효과 주는 걸로 바꾸기
+            UIView.animate(withDuration: 0.5) {
+                self.timerLabel.alpha = 1
+                self.progreeView.alpha = 1
+                self.datePicker.alpha = 0
+            }
             self.toggleButton.isSelected = true // 버튼의 title 일시정지
             self.cancelButton.isEnabled = true // 취소 버튼 활성화
             self.startTimer() // 타이머 기능
