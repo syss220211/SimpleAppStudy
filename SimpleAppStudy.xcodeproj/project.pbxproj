@@ -47,6 +47,8 @@
 		D5C7B8F22969BDEC00FFC994 /* SimpleAppCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C7B8F12969BDEC00FFC994 /* SimpleAppCalculatorViewController.swift */; };
 		D5F6680029463ABC00B407AA /* SampleStudyStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F667FF29463ABC00B407AA /* SampleStudyStoryboard.storyboard */; };
 		D5F6680229463AD000B407AA /* SampleStudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6680129463AD000B407AA /* SampleStudyViewController.swift */; };
+		D5F8337029B1CBA40045AB90 /* weatherStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F8336F29B1CBA40045AB90 /* weatherStoryboard.storyboard */; };
+		D5F8337229B1CBB30045AB90 /* weatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F8337129B1CBB30045AB90 /* weatherViewController.swift */; };
 		D5F9865A2981174F007F279A /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F986592981174F007F279A /* Diary.swift */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +114,8 @@
 		D5C7B8F12969BDEC00FFC994 /* SimpleAppCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppCalculatorViewController.swift; sourceTree = "<group>"; };
 		D5F667FF29463ABC00B407AA /* SampleStudyStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SampleStudyStoryboard.storyboard; sourceTree = "<group>"; };
 		D5F6680129463AD000B407AA /* SampleStudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleStudyViewController.swift; sourceTree = "<group>"; };
+		D5F8336F29B1CBA40045AB90 /* weatherStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = weatherStoryboard.storyboard; sourceTree = "<group>"; };
+		D5F8337129B1CBB30045AB90 /* weatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherViewController.swift; sourceTree = "<group>"; };
 		D5F986592981174F007F279A /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +204,7 @@
 		D5BA40602930A29200B13383 = {
 			isa = PBXGroup;
 			children = (
+				D5F8336E29B1CB760045AB90 /* SimpleWeather */,
 				D51566C4299637DB005438F5 /* SimplePomodoro */,
 				D58E043A29783D7E00AB28CC /* SimpleAppDiary */,
 				D59417D5296E8C2D00654643 /* SimpleAppTodo */,
@@ -277,6 +282,15 @@
 				D50D3D06296D33C00083B0B3 /* AppCalViewController.swift */,
 			);
 			path = SampleStudy;
+			sourceTree = "<group>";
+		};
+		D5F8336E29B1CB760045AB90 /* SimpleWeather */ = {
+			isa = PBXGroup;
+			children = (
+				D5F8336F29B1CBA40045AB90 /* weatherStoryboard.storyboard */,
+				D5F8337129B1CBB30045AB90 /* weatherViewController.swift */,
+			);
+			path = SimpleWeather;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +406,7 @@
 				D5F6680029463ABC00B407AA /* SampleStudyStoryboard.storyboard in Resources */,
 				D5BA40742930A29200B13383 /* Main.storyboard in Resources */,
 				D59417D9296E8D4500654643 /* SimpleAppTodoStoryboard.storyboard in Resources */,
+				D5F8337029B1CBA40045AB90 /* weatherStoryboard.storyboard in Resources */,
 				D58E043C29783DA900AB28CC /* DiaryStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +451,7 @@
 				D5880CF22966A9DB0043668A /* SimpleAppStudyLedViewController.swift in Sources */,
 				D59417DB297056B600654643 /* Task.swift in Sources */,
 				D58E044429784CA100AB28CC /* StarViewController.swift in Sources */,
+				D5F8337229B1CBB30045AB90 /* weatherViewController.swift in Sources */,
 				D5BA406D2930A29200B13383 /* AppDelegate.swift in Sources */,
 				D59892E12930C22B004A5B33 /* Study2ViewController.swift in Sources */,
 				D5BA406F2930A29200B13383 /* SceneDelegate.swift in Sources */,
