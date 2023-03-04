@@ -25,11 +25,14 @@
                                 <rect key="frame" x="138.33333333333334" y="147" width="116.66666666666666" height="34.333333333333343"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="날씨 가져오기"/>
+                                <connections>
+                                    <action selector="tapFetchWeatherButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hzw-uz-Kvp"/>
+                                </connections>
                             </button>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bny-8A-ShH">
                                 <rect key="frame" x="24" y="231.33333333333331" width="345" height="143.33333333333331"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d0C-gA-vSP">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d0C-gA-vSP">
                                         <rect key="frame" x="151" y="0.0" width="43.333333333333343" height="62"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLh-ju-B6T">
@@ -39,7 +42,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맑음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ8-WP-gHE">
-                                                <rect key="frame" x="0.0" y="37.999999999999972" width="43.333333333333336" height="24"/>
+                                                <rect key="frame" x="4.3333333333333428" y="37.999999999999972" width="34.666666666666664" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -90,6 +93,15 @@
                             <constraint firstItem="Bny-8A-ShH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="ydM-fc-tzq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="zLh-ju-B6T" id="mJr-op-aul"/>
+                        <outlet property="cityNameTextField" destination="QWC-wa-eiZ" id="SGE-NI-evR"/>
+                        <outlet property="maxTempLabel" destination="S51-IF-cpR" id="svx-QE-d3M"/>
+                        <outlet property="minTempLabel" destination="1ZP-36-KZy" id="LkZ-IZ-EEj"/>
+                        <outlet property="tempLabel" destination="knZ-TR-eXB" id="CZu-KH-Yag"/>
+                        <outlet property="weatherDescriptionLabel" destination="WQ8-WP-gHE" id="it1-h0-dxH"/>
+                        <outlet property="weatherStackView" destination="Bny-8A-ShH" id="FBE-wI-nd5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

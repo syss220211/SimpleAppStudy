@@ -49,6 +49,7 @@
 		D5F6680229463AD000B407AA /* SampleStudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6680129463AD000B407AA /* SampleStudyViewController.swift */; };
 		D5F8337029B1CBA40045AB90 /* weatherStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F8336F29B1CBA40045AB90 /* weatherStoryboard.storyboard */; };
 		D5F8337229B1CBB30045AB90 /* weatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F8337129B1CBB30045AB90 /* weatherViewController.swift */; };
+		D5F8337429B1F5350045AB90 /* Weatherinformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F8337329B1F5350045AB90 /* Weatherinformation.swift */; };
 		D5F9865A2981174F007F279A /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F986592981174F007F279A /* Diary.swift */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		D5F6680129463AD000B407AA /* SampleStudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleStudyViewController.swift; sourceTree = "<group>"; };
 		D5F8336F29B1CBA40045AB90 /* weatherStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = weatherStoryboard.storyboard; sourceTree = "<group>"; };
 		D5F8337129B1CBB30045AB90 /* weatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherViewController.swift; sourceTree = "<group>"; };
+		D5F8337329B1F5350045AB90 /* Weatherinformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weatherinformation.swift; sourceTree = "<group>"; };
 		D5F986592981174F007F279A /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -289,6 +291,7 @@
 			children = (
 				D5F8336F29B1CBA40045AB90 /* weatherStoryboard.storyboard */,
 				D5F8337129B1CBB30045AB90 /* weatherViewController.swift */,
+				D5F8337329B1F5350045AB90 /* Weatherinformation.swift */,
 			);
 			path = SimpleWeather;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				D5313D64297A309F00085814 /* DiaryDetailViewController.swift in Sources */,
 				D5856B28294633F200F7A0FB /* CodePresentViewController.swift in Sources */,
 				D598FD9F2940994400D86A4D /* SeguePresentViewController.swift in Sources */,
+				D5F8337429B1F5350045AB90 /* Weatherinformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
