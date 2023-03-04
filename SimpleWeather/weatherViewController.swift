@@ -40,18 +40,35 @@ class weatherViewController: UIViewController {
         self.maxTempLabel.text = "최고: \(Int(weatherInformation.temp.maxTemp - 273.15))°C"
     }
     
+    func showAlert(message: String) { // 매개변수 errormessage
+        let alert = UIAlertController(title: "에러", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default))
+        self.present(alert, animated: true)
+        
+    }
+    
     func getCurrentWeather(cityName: String) {
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=34024adfab8ad8999430c13c988fea93") else { return }
         let session = URLSession(configuration: .default)
-        session.dataTask(with: url) { [weak self] Data, URLResponse, Error in
-            guard let Data = Data, Error == nil else { return }
+        session.dataTask(with: url) { [weak self] data, response, error in
+            let successRange = (200..<300)
+            guard let data = data, error == nil else { return }
             let decoder = JSONDecoder()
-            guard let weatherInformation = try? decoder.decode(WeatherInformation.self, from: Data) else { return }
-            //main thread 사용
-            DispatchQueue.main.async {
-                self?.weatherStackView.isHidden = false
-                self?.comfigureView(weatherInformation: weatherInformation)
+            
+            if let response = response as? HTTPURLResponse, successRange.contains(response.statusCode) {
+                guard let weatherInformation = try? decoder.decode(WeatherInformation.self, from: data) else { return }
+                //main thread 사용
+                DispatchQueue.main.async {
+                    self?.weatherStackView.isHidden = false
+                    self?.comfigureView(weatherInformation: weatherInformation)
+                }
+            } else {
+                guard let errorMessage = try? decoder.decode(ErrorMessage.self, from: data) else { return } // error json data decoding to errorMessage
+                DispatchQueue.main.async {
+                    self?.showAlert(message: errorMessage.message)
+                }
             }
+            
             
         }.resume()
     }

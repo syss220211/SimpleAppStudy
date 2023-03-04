@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D502B26B29B369AB00AEF47D /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502B26A29B369AB00AEF47D /* ErrorMessage.swift */; };
 		D50D3D07296D33C00083B0B3 /* AppCalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50D3D06296D33C00083B0B3 /* AppCalViewController.swift */; };
 		D50D3D09296D38520083B0B3 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50D3D08296D38520083B0B3 /* RoundButton.swift */; };
 		D51566C629963828005438F5 /* PomodoroStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D51566C529963828005438F5 /* PomodoroStoryboard.storyboard */; };
@@ -71,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D502B26A29B369AB00AEF47D /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		D50D3D06296D33C00083B0B3 /* AppCalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCalViewController.swift; sourceTree = "<group>"; };
 		D50D3D08296D38520083B0B3 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		D51566C529963828005438F5 /* PomodoroStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PomodoroStoryboard.storyboard; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				D5F8336F29B1CBA40045AB90 /* weatherStoryboard.storyboard */,
 				D5F8337129B1CBB30045AB90 /* weatherViewController.swift */,
 				D5F8337329B1F5350045AB90 /* Weatherinformation.swift */,
+				D502B26A29B369AB00AEF47D /* ErrorMessage.swift */,
 			);
 			path = SimpleWeather;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				D59417D7296E8C5400654643 /* SimpleAppTodoViewController.swift in Sources */,
 				D5A7CBDE295DE28100C29777 /* CodePushTestViewController.swift in Sources */,
 				D5566BD9294986DD00E96730 /* presentSegueViewController.swift in Sources */,
+				D502B26B29B369AB00AEF47D /* ErrorMessage.swift in Sources */,
 				D5F6680229463AD000B407AA /* SampleStudyViewController.swift in Sources */,
 				D51566C829963846005438F5 /* PomodoroViewController.swift in Sources */,
 				D5566BD7294982EE00E96730 /* SeguePushViewController.swift in Sources */,
