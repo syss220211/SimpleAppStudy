@@ -19,6 +19,7 @@
 		D5313D64297A309F00085814 /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5313D63297A309F00085814 /* DiaryDetailViewController.swift */; };
 		D5566BD7294982EE00E96730 /* SeguePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5566BD6294982EE00E96730 /* SeguePushViewController.swift */; };
 		D5566BD9294986DD00E96730 /* presentSegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5566BD8294986DD00E96730 /* presentSegueViewController.swift */; };
+		D55D347729B7857E0096529A /* CityCovidOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55D347629B7857E0096529A /* CityCovidOverview.swift */; };
 		D55D5DDD29B5EA6500D8BC72 /* CovidDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55D5DDC29B5EA6500D8BC72 /* CovidDetailViewController.swift */; };
 		D581E0CF29375F18006F422F /* SuguePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581E0CE29375F18006F422F /* SuguePushViewController.swift */; };
 		D5856B262946318F00F7A0FB /* CodePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5856B252946318F00F7A0FB /* CodePushViewController.swift */; };
@@ -96,6 +97,7 @@
 		D5313D63297A309F00085814 /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 		D5566BD6294982EE00E96730 /* SeguePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePushViewController.swift; sourceTree = "<group>"; };
 		D5566BD8294986DD00E96730 /* presentSegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentSegueViewController.swift; sourceTree = "<group>"; };
+		D55D347629B7857E0096529A /* CityCovidOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCovidOverview.swift; sourceTree = "<group>"; };
 		D55D5DDC29B5EA6500D8BC72 /* CovidDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDetailViewController.swift; sourceTree = "<group>"; };
 		D581E0CE29375F18006F422F /* SuguePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuguePushViewController.swift; sourceTree = "<group>"; };
 		D5856B252946318F00F7A0FB /* CodePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePushViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				D5A23FB629B4828C00DC5161 /* CoronaViewController.swift */,
 				D5A23FBA29B482AF00DC5161 /* CoronaStoryboard.storyboard */,
 				D55D5DDC29B5EA6500D8BC72 /* CovidDetailViewController.swift */,
+				D55D347629B7857E0096529A /* CityCovidOverview.swift */,
 			);
 			path = SimpleCorona;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				D5880CF22966A9DB0043668A /* SimpleAppStudyLedViewController.swift in Sources */,
 				D59417DB297056B600654643 /* Task.swift in Sources */,
 				D58E044429784CA100AB28CC /* StarViewController.swift in Sources */,
+				D55D347729B7857E0096529A /* CityCovidOverview.swift in Sources */,
 				D5F8337229B1CBB30045AB90 /* weatherViewController.swift in Sources */,
 				D5BA406D2930A29200B13383 /* AppDelegate.swift in Sources */,
 				D5A23FB729B4828C00DC5161 /* CoronaViewController.swift in Sources */,
