@@ -22,11 +22,53 @@ class CoronaViewController: UIViewController {
             switch result {
             case let .success(result):
                 self.configureStackVeiw(koreaCovidOverview: result.korea)
+                let covidOverviewList = self.makeCovidOverviewList(cityCovidOverview: result)
+                self.configureChatView(covidOverviewList: covidOverviewList)
             case let .failure(error):
                 debugPrint("error \(error)")
             }
         }
-
+    }
+    
+    // 시도별 신규 확진자 수 파이차트에 표시
+    func makeCovidOverviewList(
+        cityCovidOverview: CityCovidOverview
+    ) -> [CovidOverview] {
+        return [
+            cityCovidOverview.seoul,
+            cityCovidOverview.busan,
+            cityCovidOverview.daegu,
+            cityCovidOverview.incheon,
+            cityCovidOverview.gwangju,
+            cityCovidOverview.daejeon,
+            cityCovidOverview.ulsan,
+            cityCovidOverview.sejong,
+            cityCovidOverview.gyeonggi,
+            cityCovidOverview.gyeongbuk,
+            cityCovidOverview.chungbuk,
+            cityCovidOverview.chungnam,
+            cityCovidOverview.gyeongnam,
+            cityCovidOverview.jeju
+        ]
+    }
+    
+    func configureChatView(covidOverviewList: [CovidOverview]) {
+        let entries = covidOverviewList.compactMap { [weak self] overview -> PieChartDataEntry? in
+            guard let self = self else { return nil }
+            return PieChartDataEntry(
+                value: self.removeFormatString(string: overview.newCase),
+                label: overview.countryName,
+                data: overview
+            )
+        }
+        let dataSet = PieChartDataSet(entries: entries, label: "코로나 발생 현황")
+        self.pieChartView.data = PieChartData(dataSet: dataSet)
+    }
+    
+    func removeFormatString(string: String) -> Double {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        return formatter.number(from: string)?.doubleValue ?? 0
     }
     
     // 서버에서 응답받은 확진자 수에 대한 정보 totalCaseLabel, newCaseLabel에 표시되도록 만들기
