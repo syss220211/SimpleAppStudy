@@ -29,7 +29,7 @@ class weatherViewController: UIViewController {
             self.view.endEditing(true) // 버튼 눌리면 키보드 사라짐
         }
     }
-    
+     
     func comfigureView(weatherInformation: WeatherInformation) {
         self.cityNameLabel.text = weatherInformation.name
         if let weather = weatherInformation.weather.first {

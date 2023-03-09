@@ -21,12 +21,18 @@ class CoronaViewController: UIViewController {
             guard let self = self else { return }
             switch result {
             case let .success(result):
-                debugPrint("success \(result)")
+                self.configureStackVeiw(koreaCovidOverview: result.korea)
             case let .failure(error):
                 debugPrint("error \(error)")
             }
         }
 
+    }
+    
+    // 서버에서 응답받은 확진자 수에 대한 정보 totalCaseLabel, newCaseLabel에 표시되도록 만들기
+    func configureStackVeiw(koreaCovidOverview: CovidOverview) {
+        self.totalCaseLabel.text = "\(koreaCovidOverview.totalCase)명"
+        self.newCaseLabel.text = "\(koreaCovidOverview.newCase)명"
     }
     
     // 시도별 코로나 현황 데이터를 가지고 올수 있는 api 호출하기
