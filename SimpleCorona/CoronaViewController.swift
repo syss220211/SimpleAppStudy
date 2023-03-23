@@ -11,14 +11,24 @@ import Alamofire
 
 class CoronaViewController: UIViewController {
 
-    @IBOutlet var totalCaseLabel: UILabel!
-    @IBOutlet var newCaseLabel: UILabel!
-    @IBOutlet var pieChartView: PieChartView!
+    @IBOutlet weak var totalCaseLabel: UILabel!
+    @IBOutlet weak var newCaseLabel: UILabel!
+    @IBOutlet weak var labelStackView: UIStackView!
+    @IBOutlet weak var pieChartView: PieChartView!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.indicatorView.startAnimating()
+        
         self.fetchCovidOverview { [weak self] result in
             guard let self = self else { return }
+            
+            self.indicatorView.stopAnimating()
+            self.indicatorView.isHidden = true
+            self.labelStackView.isHidden = false
+            self.pieChartView.isHidden = false
+            
             switch result {
             case let .success(result):
                 self.configureStackVeiw(koreaCovidOverview: result.korea)
