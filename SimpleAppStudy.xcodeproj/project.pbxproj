@@ -59,6 +59,8 @@
 		D5F8337229B1CBB30045AB90 /* weatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F8337129B1CBB30045AB90 /* weatherViewController.swift */; };
 		D5F8337429B1F5350045AB90 /* Weatherinformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F8337329B1F5350045AB90 /* Weatherinformation.swift */; };
 		D5F9865A2981174F007F279A /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F986592981174F007F279A /* Diary.swift */; };
+		D5FC7AE329CDF05900E4773D /* SpotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7AE229CDF05900E4773D /* SpotifyViewController.swift */; };
+		D5FC7AE529CDF06C00E4773D /* SpotifyStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5FC7AE429CDF06C00E4773D /* SpotifyStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +143,8 @@
 		D5F8337129B1CBB30045AB90 /* weatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherViewController.swift; sourceTree = "<group>"; };
 		D5F8337329B1F5350045AB90 /* Weatherinformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weatherinformation.swift; sourceTree = "<group>"; };
 		D5F986592981174F007F279A /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		D5FC7AE229CDF05900E4773D /* SpotifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyViewController.swift; sourceTree = "<group>"; };
+		D5FC7AE429CDF06C00E4773D /* SpotifyStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SpotifyStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +269,7 @@
 		D5BA40602930A29200B13383 = {
 			isa = PBXGroup;
 			children = (
+				D5FC7AE129CDF04400E4773D /* SimpleSpotify */,
 				D5A23FB529B4827200DC5161 /* SimpleCorona */,
 				D5F8336E29B1CB760045AB90 /* SimpleWeather */,
 				D51566C4299637DB005438F5 /* SimplePomodoro */,
@@ -357,6 +362,15 @@
 				D502B26A29B369AB00AEF47D /* ErrorMessage.swift */,
 			);
 			path = SimpleWeather;
+			sourceTree = "<group>";
+		};
+		D5FC7AE129CDF04400E4773D /* SimpleSpotify */ = {
+			isa = PBXGroup;
+			children = (
+				D5FC7AE229CDF05900E4773D /* SpotifyViewController.swift */,
+				D5FC7AE429CDF06C00E4773D /* SpotifyStoryboard.storyboard */,
+			);
+			path = SimpleSpotify;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,6 +492,7 @@
 				D5F6680029463ABC00B407AA /* SampleStudyStoryboard.storyboard in Resources */,
 				D5BA40742930A29200B13383 /* Main.storyboard in Resources */,
 				D59417D9296E8D4500654643 /* SimpleAppTodoStoryboard.storyboard in Resources */,
+				D5FC7AE529CDF06C00E4773D /* SpotifyStoryboard.storyboard in Resources */,
 				D5F8337029B1CBA40045AB90 /* weatherStoryboard.storyboard in Resources */,
 				D58E043C29783DA900AB28CC /* DiaryStoryboard.storyboard in Resources */,
 			);
@@ -625,6 +640,7 @@
 				D5313D6229792F2000085814 /* WriteDiaryViewController.swift in Sources */,
 				D5856B262946318F00F7A0FB /* CodePushViewController.swift in Sources */,
 				D5F9865A2981174F007F279A /* Diary.swift in Sources */,
+				D5FC7AE329CDF05900E4773D /* SpotifyViewController.swift in Sources */,
 				D5880CF22966A9DB0043668A /* SimpleAppStudyLedViewController.swift in Sources */,
 				D59417DB297056B600654643 /* Task.swift in Sources */,
 				D58E044429784CA100AB28CC /* StarViewController.swift in Sources */,
