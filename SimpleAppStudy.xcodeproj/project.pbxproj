@@ -18,6 +18,7 @@
 		D5313D6229792F2000085814 /* WriteDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5313D6129792F2000085814 /* WriteDiaryViewController.swift */; };
 		D5313D64297A309F00085814 /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5313D63297A309F00085814 /* DiaryDetailViewController.swift */; };
 		D544172F29DDC1480043E12C /* EnterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D544172E29DDC1480043E12C /* EnterEmailViewController.swift */; };
+		D5510AAA29DF147C00367EF0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5510AA929DF147C00367EF0 /* DetailViewController.swift */; };
 		D5566BD7294982EE00E96730 /* SeguePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5566BD6294982EE00E96730 /* SeguePushViewController.swift */; };
 		D5566BD9294986DD00E96730 /* presentSegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5566BD8294986DD00E96730 /* presentSegueViewController.swift */; };
 		D55D347729B7857E0096529A /* CityCovidOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55D347629B7857E0096529A /* CityCovidOverview.swift */; };
@@ -102,6 +103,7 @@
 		D5313D6129792F2000085814 /* WriteDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDiaryViewController.swift; sourceTree = "<group>"; };
 		D5313D63297A309F00085814 /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 		D544172E29DDC1480043E12C /* EnterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailViewController.swift; sourceTree = "<group>"; };
+		D5510AA929DF147C00367EF0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D5566BD6294982EE00E96730 /* SeguePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePushViewController.swift; sourceTree = "<group>"; };
 		D5566BD8294986DD00E96730 /* presentSegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentSegueViewController.swift; sourceTree = "<group>"; };
 		D55D347629B7857E0096529A /* CityCovidOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCovidOverview.swift; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 				D5D0222E29D330F2004917B6 /* DdayViewController.swift */,
 				D5D0223029D330FA004917B6 /* DdayStoryboard.storyboard */,
 				D5C9737629DB21FF00C20C3C /* DdayCell.swift */,
+				D5510AA929DF147C00367EF0 /* DetailViewController.swift */,
 			);
 			path = DdayApp;
 			sourceTree = "<group>";
@@ -643,6 +646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5510AAA29DF147C00367EF0 /* DetailViewController.swift in Sources */,
 				D50D3D09296D38520083B0B3 /* RoundButton.swift in Sources */,
 				D55D5DDD29B5EA6500D8BC72 /* CovidDetailViewController.swift in Sources */,
 				D544172F29DDC1480043E12C /* EnterEmailViewController.swift in Sources */,

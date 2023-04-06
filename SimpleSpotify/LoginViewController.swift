@@ -23,12 +23,12 @@ class LoginViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Navigation Bar 숨기기
-        navigationController?.navigationBar.isHidden = true
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//        // Navigation Bar 숨기기
+//        navigationController?.navigationBar.isHidden = true
+//    } //-> ?? 똑같음, 무슨 차이인지 잘 모르겠음
     
     @IBAction func googleLoginButtonTapped(_ sender: UIButton) {
         // Firebase 인증
