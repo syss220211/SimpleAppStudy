@@ -92,6 +92,9 @@
                         <barButtonItem key="rightBarButtonItem" title="setting" id="dNk-4Z-qSA">
                             <imageReference key="image" image="gearshape" catalog="system" symbolScale="large"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="PqR-nD-mNH" kind="show" id="xZ5-Uc-EZK"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -137,6 +140,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IEW-Wg-71m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="650" y="-665"/>
+        </scene>
+        <!--Setting Table View Controller-->
+        <scene sceneID="QIr-HB-Ptr">
+            <objects>
+                <viewController id="PqR-nD-mNH" customClass="SettingTableViewController" customModule="SimpleAppStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ja8-tN-a3C">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xpi-GI-4so">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="66b-ac-jqL">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="66b-ac-jqL" id="7Xg-LM-ETd">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lNU-Gj-PBw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xpi-GI-4so" firstAttribute="leading" secondItem="lNU-Gj-PBw" secondAttribute="leading" id="7L0-5o-E5n"/>
+                            <constraint firstItem="lNU-Gj-PBw" firstAttribute="trailing" secondItem="xpi-GI-4so" secondAttribute="trailing" id="CV7-1u-mSt"/>
+                            <constraint firstItem="xpi-GI-4so" firstAttribute="top" secondItem="lNU-Gj-PBw" secondAttribute="top" id="VRy-pD-V7o"/>
+                            <constraint firstItem="lNU-Gj-PBw" firstAttribute="bottom" secondItem="xpi-GI-4so" secondAttribute="bottom" id="out-5w-ubt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QK8-M0-jhT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kuC-jv-pG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3106" y="-1280"/>
         </scene>
     </scenes>
     <resources>

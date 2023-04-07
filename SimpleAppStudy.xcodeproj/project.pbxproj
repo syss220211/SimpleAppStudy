@@ -17,6 +17,7 @@
 		D51566C829963846005438F5 /* PomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51566C729963846005438F5 /* PomodoroViewController.swift */; };
 		D5313D6229792F2000085814 /* WriteDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5313D6129792F2000085814 /* WriteDiaryViewController.swift */; };
 		D5313D64297A309F00085814 /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5313D63297A309F00085814 /* DiaryDetailViewController.swift */; };
+		D53A47B129E06392007E137B /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53A47B029E06392007E137B /* SettingTableViewController.swift */; };
 		D544172F29DDC1480043E12C /* EnterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D544172E29DDC1480043E12C /* EnterEmailViewController.swift */; };
 		D5510AAA29DF147C00367EF0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5510AA929DF147C00367EF0 /* DetailViewController.swift */; };
 		D5566BD7294982EE00E96730 /* SeguePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5566BD6294982EE00E96730 /* SeguePushViewController.swift */; };
@@ -102,6 +103,7 @@
 		D51566C729963846005438F5 /* PomodoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroViewController.swift; sourceTree = "<group>"; };
 		D5313D6129792F2000085814 /* WriteDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDiaryViewController.swift; sourceTree = "<group>"; };
 		D5313D63297A309F00085814 /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
+		D53A47B029E06392007E137B /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		D544172E29DDC1480043E12C /* EnterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailViewController.swift; sourceTree = "<group>"; };
 		D5510AA929DF147C00367EF0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D5566BD6294982EE00E96730 /* SeguePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePushViewController.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 				D5D0223029D330FA004917B6 /* DdayStoryboard.storyboard */,
 				D5C9737629DB21FF00C20C3C /* DdayCell.swift */,
 				D5510AA929DF147C00367EF0 /* DetailViewController.swift */,
+				D53A47B029E06392007E137B /* SettingTableViewController.swift */,
 			);
 			path = DdayApp;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				D5880CF22966A9DB0043668A /* SimpleAppStudyLedViewController.swift in Sources */,
 				D59417DB297056B600654643 /* Task.swift in Sources */,
 				D58E044429784CA100AB28CC /* StarViewController.swift in Sources */,
+				D53A47B129E06392007E137B /* SettingTableViewController.swift in Sources */,
 				D5C9737729DB21FF00C20C3C /* DdayCell.swift in Sources */,
 				D55D347729B7857E0096529A /* CityCovidOverview.swift in Sources */,
 				D5F8337229B1CBB30045AB90 /* weatherViewController.swift in Sources */,
