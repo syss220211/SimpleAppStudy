@@ -39,6 +39,8 @@
 		D59892E12930C22B004A5B33 /* Study2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59892E02930C22B004A5B33 /* Study2ViewController.swift */; };
 		D59892E32930C30F004A5B33 /* Study2Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D59892E22930C30F004A5B33 /* Study2Storyboard.storyboard */; };
 		D598FD9F2940994400D86A4D /* SeguePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D598FD9E2940994400D86A4D /* SeguePresentViewController.swift */; };
+		D5A03EA629EC0DC6008A93C4 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A03EA529EC0DC6008A93C4 /* ChallengeViewController.swift */; };
+		D5A03EAA29EC1BBA008A93C4 /* BSegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A03EA929EC1BBA008A93C4 /* BSegueViewController.swift */; };
 		D5A23FB729B4828C00DC5161 /* CoronaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A23FB629B4828C00DC5161 /* CoronaViewController.swift */; };
 		D5A23FBB29B482AF00DC5161 /* CoronaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5A23FBA29B482AF00DC5161 /* CoronaStoryboard.storyboard */; };
 		D5BA406D2930A29200B13383 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA406C2930A29200B13383 /* AppDelegate.swift */; };
@@ -55,6 +57,10 @@
 		D5C9737729DB21FF00C20C3C /* DdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9737629DB21FF00C20C3C /* DdayCell.swift */; };
 		D5D0222F29D330F2004917B6 /* DdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0222E29D330F2004917B6 /* DdayViewController.swift */; };
 		D5D0223129D330FA004917B6 /* DdayStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D0223029D330FA004917B6 /* DdayStoryboard.storyboard */; };
+		D5E887CF29EC39C50023A0E2 /* CSegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E887CE29EC39C50023A0E2 /* CSegueViewController.swift */; };
+		D5E887D129EC3F800023A0E2 /* DCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E887D029EC3F800023A0E2 /* DCodeViewController.swift */; };
+		D5E887D329EC534A0023A0E2 /* ECodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E887D229EC534A0023A0E2 /* ECodeViewController.swift */; };
+		D5E887D529EC55280023A0E2 /* peformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E887D429EC55280023A0E2 /* peformViewController.swift */; };
 		D5F6680029463ABC00B407AA /* SampleStudyStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F667FF29463ABC00B407AA /* SampleStudyStoryboard.storyboard */; };
 		D5F8337029B1CBA40045AB90 /* weatherStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F8336F29B1CBA40045AB90 /* weatherStoryboard.storyboard */; };
 		D5F8337229B1CBB30045AB90 /* weatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F8337129B1CBB30045AB90 /* weatherViewController.swift */; };
@@ -120,6 +126,8 @@
 		D59892E02930C22B004A5B33 /* Study2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study2ViewController.swift; sourceTree = "<group>"; };
 		D59892E22930C30F004A5B33 /* Study2Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Study2Storyboard.storyboard; sourceTree = "<group>"; };
 		D598FD9E2940994400D86A4D /* SeguePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePresentViewController.swift; sourceTree = "<group>"; };
+		D5A03EA529EC0DC6008A93C4 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		D5A03EA929EC1BBA008A93C4 /* BSegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSegueViewController.swift; sourceTree = "<group>"; };
 		D5A23FB629B4828C00DC5161 /* CoronaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaViewController.swift; sourceTree = "<group>"; };
 		D5A23FBA29B482AF00DC5161 /* CoronaStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoronaStoryboard.storyboard; sourceTree = "<group>"; };
 		D5BA40692930A29200B13383 /* SimpleAppStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleAppStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +148,10 @@
 		D5C9737629DB21FF00C20C3C /* DdayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayCell.swift; sourceTree = "<group>"; };
 		D5D0222E29D330F2004917B6 /* DdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayViewController.swift; sourceTree = "<group>"; };
 		D5D0223029D330FA004917B6 /* DdayStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DdayStoryboard.storyboard; sourceTree = "<group>"; };
+		D5E887CE29EC39C50023A0E2 /* CSegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSegueViewController.swift; sourceTree = "<group>"; };
+		D5E887D029EC3F800023A0E2 /* DCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCodeViewController.swift; sourceTree = "<group>"; };
+		D5E887D229EC534A0023A0E2 /* ECodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECodeViewController.swift; sourceTree = "<group>"; };
+		D5E887D429EC55280023A0E2 /* peformViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = peformViewController.swift; sourceTree = "<group>"; };
 		D5F667FF29463ABC00B407AA /* SampleStudyStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SampleStudyStoryboard.storyboard; sourceTree = "<group>"; };
 		D5F8336F29B1CBA40045AB90 /* weatherStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = weatherStoryboard.storyboard; sourceTree = "<group>"; };
 		D5F8337129B1CBB30045AB90 /* weatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherViewController.swift; sourceTree = "<group>"; };
@@ -359,6 +371,12 @@
 			isa = PBXGroup;
 			children = (
 				D5F667FF29463ABC00B407AA /* SampleStudyStoryboard.storyboard */,
+				D5E887D229EC534A0023A0E2 /* ECodeViewController.swift */,
+				D5E887D029EC3F800023A0E2 /* DCodeViewController.swift */,
+				D5E887CE29EC39C50023A0E2 /* CSegueViewController.swift */,
+				D5A03EA529EC0DC6008A93C4 /* ChallengeViewController.swift */,
+				D5A03EA929EC1BBA008A93C4 /* BSegueViewController.swift */,
+				D5E887D429EC55280023A0E2 /* peformViewController.swift */,
 			);
 			path = SampleStudy;
 			sourceTree = "<group>";
@@ -641,9 +659,11 @@
 				D59417D7296E8C5400654643 /* SimpleAppTodoViewController.swift in Sources */,
 				D502B26B29B369AB00AEF47D /* ErrorMessage.swift in Sources */,
 				D51566C829963846005438F5 /* PomodoroViewController.swift in Sources */,
+				D5E887D529EC55280023A0E2 /* peformViewController.swift in Sources */,
 				D5BA40712930A29200B13383 /* ViewController.swift in Sources */,
 				D5880CF42966B84C0043668A /* SettingViewController.swift in Sources */,
 				D58E044229784C1100AB28CC /* DiaryCell.swift in Sources */,
+				D5A03EA629EC0DC6008A93C4 /* ChallengeViewController.swift in Sources */,
 				D5C7B8F22969BDEC00FFC994 /* SimpleAppCalculatorViewController.swift in Sources */,
 				D58E043E29783DB400AB28CC /* DiaryViewController.swift in Sources */,
 				D5313D6229792F2000085814 /* WriteDiaryViewController.swift in Sources */,
@@ -654,19 +674,23 @@
 				D59417DB297056B600654643 /* Task.swift in Sources */,
 				D58E044429784CA100AB28CC /* StarViewController.swift in Sources */,
 				D53A47B129E06392007E137B /* SettingTableViewController.swift in Sources */,
+				D5A03EAA29EC1BBA008A93C4 /* BSegueViewController.swift in Sources */,
 				D5C9737729DB21FF00C20C3C /* DdayCell.swift in Sources */,
 				D55D347729B7857E0096529A /* CityCovidOverview.swift in Sources */,
 				D5F8337229B1CBB30045AB90 /* weatherViewController.swift in Sources */,
 				D5BA406D2930A29200B13383 /* AppDelegate.swift in Sources */,
 				D5A23FB729B4828C00DC5161 /* CoronaViewController.swift in Sources */,
+				D5E887D329EC534A0023A0E2 /* ECodeViewController.swift in Sources */,
 				D59892E12930C22B004A5B33 /* Study2ViewController.swift in Sources */,
 				D5BA406F2930A29200B13383 /* SceneDelegate.swift in Sources */,
 				D5D0222F29D330F2004917B6 /* DdayViewController.swift in Sources */,
+				D5E887CF29EC39C50023A0E2 /* CSegueViewController.swift in Sources */,
 				D58E044629784DC300AB28CC /* StarCell.swift in Sources */,
 				D581E0CF29375F18006F422F /* SuguePushViewController.swift in Sources */,
 				D59892DD2930AECF004A5B33 /* Content.swift in Sources */,
 				D5313D64297A309F00085814 /* DiaryDetailViewController.swift in Sources */,
 				D5856B28294633F200F7A0FB /* CodePresentViewController.swift in Sources */,
+				D5E887D129EC3F800023A0E2 /* DCodeViewController.swift in Sources */,
 				D598FD9F2940994400D86A4D /* SeguePresentViewController.swift in Sources */,
 				D5F8337429B1F5350045AB90 /* Weatherinformation.swift in Sources */,
 			);
