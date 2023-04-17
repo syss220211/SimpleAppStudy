@@ -220,6 +220,50 @@
             </objects>
             <point key="canvasLocation" x="1305" y="15"/>
         </scene>
+        <!--Main View Controller-->
+        <scene sceneID="YBE-vG-TJs">
+            <objects>
+                <viewController id="J7U-GV-CP8" customClass="MainViewController" customModule="SimpleAppStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mbE-3q-Dai">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환영합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTx-J7-OMZ">
+                                <rect key="frame" x="139.33333333333334" y="423.66666666666669" width="114.66666666666666" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9Y-qD-5F2">
+                                <rect key="frame" x="153" y="473.66666666666669" width="87" height="36"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="로그아웃">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutButtonTapped:" destination="J7U-GV-CP8" eventType="touchUpInside" id="h3e-6s-TCa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O9a-xJ-j7w"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E9Y-qD-5F2" firstAttribute="centerX" secondItem="O9a-xJ-j7w" secondAttribute="centerX" id="4oY-LN-PEr"/>
+                            <constraint firstItem="E9Y-qD-5F2" firstAttribute="top" secondItem="KTx-J7-OMZ" secondAttribute="bottom" constant="20" id="NbD-bT-2WY"/>
+                            <constraint firstItem="KTx-J7-OMZ" firstAttribute="centerX" secondItem="O9a-xJ-j7w" secondAttribute="centerX" id="cWx-QH-hrf"/>
+                            <constraint firstItem="KTx-J7-OMZ" firstAttribute="centerY" secondItem="O9a-xJ-j7w" secondAttribute="centerY" id="xNd-UW-qJP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="K0K-ck-xaN"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="KTx-J7-OMZ" id="odZ-DF-QWS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q4N-QP-fhl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2088" y="15"/>
+        </scene>
     </scenes>
     <resources>
         <image name="logo_apple" width="33.333332061767578" height="33.333332061767578"/>

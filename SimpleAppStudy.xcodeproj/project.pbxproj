@@ -18,6 +18,7 @@
 		D5313D64297A309F00085814 /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5313D63297A309F00085814 /* DiaryDetailViewController.swift */; };
 		D53A47B129E06392007E137B /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53A47B029E06392007E137B /* SettingTableViewController.swift */; };
 		D544172F29DDC1480043E12C /* EnterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D544172E29DDC1480043E12C /* EnterEmailViewController.swift */; };
+		D54501FA29ED9B7C00CF68E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54501F929ED9B7C00CF68E5 /* MainViewController.swift */; };
 		D5510AAA29DF147C00367EF0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5510AA929DF147C00367EF0 /* DetailViewController.swift */; };
 		D55D347729B7857E0096529A /* CityCovidOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55D347629B7857E0096529A /* CityCovidOverview.swift */; };
 		D55D5DDD29B5EA6500D8BC72 /* CovidDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55D5DDC29B5EA6500D8BC72 /* CovidDetailViewController.swift */; };
@@ -105,6 +106,7 @@
 		D5313D63297A309F00085814 /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 		D53A47B029E06392007E137B /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		D544172E29DDC1480043E12C /* EnterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailViewController.swift; sourceTree = "<group>"; };
+		D54501F929ED9B7C00CF68E5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D5510AA929DF147C00367EF0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D55D347629B7857E0096529A /* CityCovidOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCovidOverview.swift; sourceTree = "<group>"; };
 		D55D5DDC29B5EA6500D8BC72 /* CovidDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDetailViewController.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 				D5FC7AE229CDF05900E4773D /* LoginViewController.swift */,
 				D5FC7AE429CDF06C00E4773D /* SpotifyStoryboard.storyboard */,
 				D544172E29DDC1480043E12C /* EnterEmailViewController.swift */,
+				D54501F929ED9B7C00CF68E5 /* MainViewController.swift */,
 			);
 			path = SimpleSpotify;
 			sourceTree = "<group>";
@@ -673,6 +676,7 @@
 				D5880CF22966A9DB0043668A /* SimpleAppStudyLedViewController.swift in Sources */,
 				D59417DB297056B600654643 /* Task.swift in Sources */,
 				D58E044429784CA100AB28CC /* StarViewController.swift in Sources */,
+				D54501FA29ED9B7C00CF68E5 /* MainViewController.swift in Sources */,
 				D53A47B129E06392007E137B /* SettingTableViewController.swift in Sources */,
 				D5A03EAA29EC1BBA008A93C4 /* BSegueViewController.swift in Sources */,
 				D5C9737729DB21FF00C20C3C /* DdayCell.swift in Sources */,
